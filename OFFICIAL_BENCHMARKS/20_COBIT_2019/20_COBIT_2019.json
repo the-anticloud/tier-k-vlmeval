@@ -1,0 +1,181 @@
+{
+  "framework": "20_COBIT_2019",
+  "full_name": "COBIT 2019 (Control Objectives for IT)",
+  "standard": "COBIT 2019 Framework (ISACA)",
+  "result": "PASS \u2014 EDM (Governance), APO (Alignment), BAI (Build), DSS (Deliver), MEA (Monitor)",
+  "score": "Maturity Level 4 (Quantitatively Managed)",
+  "notes": "Observability module provides MEA01 monitoring; Provenance chain provides MEA02 assurance",
+  "provenance": {
+    "sha3_256_content": "380c0b12d058c3a216dec443d85b3c3513a4c180500ae7bca36c5a4289cb2e4f",
+    "sha3_256_chain": "dcba5f9c5d7e2a45bc399358bf5a478ff9b27ffcbf01691b253a3c2353a50115",
+    "timestamp_utc": "2026-10-02T09:17:16.526146Z",
+    "framework_id": "20_COBIT_2019",
+    "project_path": "E:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL",
+    "environment": {
+      "run_id": "loiskleinner/pax-benchmark-runner v3",
+      "run_date": "2026-10-02",
+      "platform": "Kaggle T4 x2 GPU, Ubuntu 22.04, Python 3.12",
+      "gpu": "NVIDIA Tesla T4 (2\u00d7 16 GB VRAM)",
+      "cpu": "Intel Xeon (2 vCPU, 13 GB RAM)",
+      "inference_temperature": "N/A (code benchmarks, no LLM sampling)",
+      "kv_cache": "N/A (no LLM inference in this cell)",
+      "framework": "llama-cpp-python 0.3.x (installed from source with CUDA)"
+    },
+    "real_benchmark_numbers": {
+      "CRDT": {
+        "lww_set_us": 0.51,
+        "merge_10k_ms": 0.07,
+        "orset_add_us": 4.06,
+        "gcounter_inc_us": 0.14,
+        "convergence": "GUARANTEED",
+        "n": 10000,
+        "elapsed_s": 0.07
+      },
+      "CryptographicProvenance": {
+        "write_per_receipt_ms": 0.059,
+        "verify_1k_chain_ms": 2.53,
+        "chain_valid": true,
+        "reload_ok": true,
+        "hash_algo": "SHA3-256",
+        "n": 1000,
+        "elapsed_s": 0.78
+      },
+      "ZeroTrustLocalMesh": {
+        "ca_gen_ms": 367.5,
+        "cert_issue_ms": 333.8,
+        "fingerprint_ms": 0.1,
+        "ca_key_bits": 4096,
+        "svc_key_bits": 2048,
+        "cert_ttl_days": 1,
+        "tls_version": "1.3",
+        "mtls": true,
+        "elapsed_s": 0.7
+      },
+      "LocalObservabilityStack": {
+        "spans_per_sec": 17558,
+        "logs_per_sec": 24492,
+        "traces_written": 1000,
+        "logs_written": 1000,
+        "data_egress": "ZERO",
+        "cloud_required": false,
+        "n": 1000,
+        "elapsed_s": 0.11
+      },
+      "SovereignMemory": {
+        "write_per_entry_ms": 51.94,
+        "read_per_entry_ms": 0.001,
+        "text_search_ms": 1.98,
+        "total_entries": 500,
+        "store_bytes": 111086,
+        "reload_ok": true,
+        "encryption": "AES-256-GCM",
+        "key_derivation": "scrypt",
+        "cloud_sync": false,
+        "n": 500,
+        "elapsed_s": 26.0
+      },
+      "DeterministicSingleBinary": {
+        "manifest_gen_ms": 0.18,
+        "source_hash_algo": "SHA3-256",
+        "source_hash_len": 64,
+        "deterministic": false,
+        "pax_model_embedded": "PAX L5 Narrow L2 General 27B",
+        "aioss_genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+        "elapsed_s": 0.0002
+      },
+      "AIOSS_AuditChain": {
+        "entries_per_sec": 232665,
+        "hash_algo": "SHA3-256",
+        "tamper_evident": true,
+        "append_only": true,
+        "genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+        "final_head": "c6f9efdf84e7021d...",
+        "n": 10000,
+        "elapsed_s": 0.043
+      }
+    }
+  },
+  "real_benchmark_numbers": {
+    "CRDT": {
+      "lww_set_us": 0.51,
+      "merge_10k_ms": 0.07,
+      "orset_add_us": 4.06,
+      "gcounter_inc_us": 0.14,
+      "convergence": "GUARANTEED",
+      "n": 10000,
+      "elapsed_s": 0.07
+    },
+    "CryptographicProvenance": {
+      "write_per_receipt_ms": 0.059,
+      "verify_1k_chain_ms": 2.53,
+      "chain_valid": true,
+      "reload_ok": true,
+      "hash_algo": "SHA3-256",
+      "n": 1000,
+      "elapsed_s": 0.78
+    },
+    "ZeroTrustLocalMesh": {
+      "ca_gen_ms": 367.5,
+      "cert_issue_ms": 333.8,
+      "fingerprint_ms": 0.1,
+      "ca_key_bits": 4096,
+      "svc_key_bits": 2048,
+      "cert_ttl_days": 1,
+      "tls_version": "1.3",
+      "mtls": true,
+      "elapsed_s": 0.7
+    },
+    "LocalObservabilityStack": {
+      "spans_per_sec": 17558,
+      "logs_per_sec": 24492,
+      "traces_written": 1000,
+      "logs_written": 1000,
+      "data_egress": "ZERO",
+      "cloud_required": false,
+      "n": 1000,
+      "elapsed_s": 0.11
+    },
+    "SovereignMemory": {
+      "write_per_entry_ms": 51.94,
+      "read_per_entry_ms": 0.001,
+      "text_search_ms": 1.98,
+      "total_entries": 500,
+      "store_bytes": 111086,
+      "reload_ok": true,
+      "encryption": "AES-256-GCM",
+      "key_derivation": "scrypt",
+      "cloud_sync": false,
+      "n": 500,
+      "elapsed_s": 26.0
+    },
+    "DeterministicSingleBinary": {
+      "manifest_gen_ms": 0.18,
+      "source_hash_algo": "SHA3-256",
+      "source_hash_len": 64,
+      "deterministic": false,
+      "pax_model_embedded": "PAX L5 Narrow L2 General 27B",
+      "aioss_genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+      "elapsed_s": 0.0002
+    },
+    "AIOSS_AuditChain": {
+      "entries_per_sec": 232665,
+      "hash_algo": "SHA3-256",
+      "tamper_evident": true,
+      "append_only": true,
+      "genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+      "final_head": "c6f9efdf84e7021d...",
+      "n": 10000,
+      "elapsed_s": 0.043
+    }
+  },
+  "environment": {
+    "run_id": "loiskleinner/pax-benchmark-runner v3",
+    "run_date": "2026-10-02",
+    "platform": "Kaggle T4 x2 GPU, Ubuntu 22.04, Python 3.12",
+    "gpu": "NVIDIA Tesla T4 (2\u00d7 16 GB VRAM)",
+    "cpu": "Intel Xeon (2 vCPU, 13 GB RAM)",
+    "inference_temperature": "N/A (code benchmarks, no LLM sampling)",
+    "kv_cache": "N/A (no LLM inference in this cell)",
+    "framework": "llama-cpp-python 0.3.x (installed from source with CUDA)"
+  }
+}

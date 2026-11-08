@@ -1,0 +1,40 @@
+# Isolated Lab Results
+
+**Project:** `K_VLMEVAL`  
+**Tier:** TIER_6_SECURITY_EVAL  
+**Identity:** Upstream `open-compass/VLMEvalKit` @ `54a063c5bf75` (Apache-2.0)
+
+## Why isolation is recorded separately
+
+Results produced locally are not the same claim as results produced after
+a public launch. Local runs can be shaped by the operator; public runs
+cannot. Conflating them would let a controlled experiment masquerade as a
+field result, which is the specific failure the II budget exists to
+prevent. This folder holds only the isolated, pre-launch condition.
+
+## Reproduction contract
+
+A result is admissible here only if all of the following are recorded:
+
+1. The exact commit of this project and of its upstream.
+2. The environment (interpreter, platform, installed extras).
+3. The command, verbatim.
+4. The pass condition, stated before the run.
+5. The observed output, unedited.
+
+## Current state
+
+Project `K_VLMEVAL` has no executed lab result recorded at the time of
+generation. The register below is the template the first run must fill
+in; it is not a result.
+
+| Result | Pass condition | Command | Observed | Status |
+| --- | --- | --- | --- | --- |
+| (none yet) | (define before running) | (verbatim) | (unrecorded) | NOT RUN |
+
+## After public launch
+
+Kaggle and Hugging Face deployment results belong in a separate record,
+never here, and must state the model weights, dataset revision, and
+inference configuration used. Expect these to differ from the isolated
+figures; where they do, the difference is the finding.

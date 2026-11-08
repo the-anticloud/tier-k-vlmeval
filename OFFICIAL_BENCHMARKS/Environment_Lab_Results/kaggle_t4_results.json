@@ -1,0 +1,63 @@
+{
+  "project": "K_VLMEVAL",
+  "tier": "T6",
+  "run_ts": "2026-09-30T19:18:40.306832+00:00",
+  "hardware": {
+    "gpu_name": "Tesla T4",
+    "gpu_vram_gb": 15.64,
+    "gpu_multiprocessors": 40,
+    "gpu_cuda_capability": "7.5",
+    "gpu_temp_c": "47",
+    "gpu_power_w": "12.34",
+    "gpu_sm_clock_mhz": "300",
+    "gpu_mem_clock_mhz": "405\nTesla T4",
+    "cpu": "x86_64",
+    "cpu_cores_physical": 2,
+    "cpu_cores_logical": 4,
+    "ram_gb": 33.66,
+    "disk_total_gb": 8758.39,
+    "os": "Linux 6.12.90+",
+    "python": "3.12.13 (main, ",
+    "cuda_version": "12.8",
+    "torch_version": "2.10.0+cu128",
+    "cudnn_version": 91002
+  },
+  "inference_proxy": {
+    "model": "gpt2",
+    "device": "cuda",
+    "tokens_per_second": 97.3,
+    "latency_p50_ms": 508.2,
+    "latency_p90_ms": 523.9,
+    "latency_p99_ms": 557.8,
+    "kv_cache_mb": 521.37,
+    "vram_peak_mb": 526.4,
+    "note": "GPT-2 proxy. Real vLLM on A100 is 5-20x higher with PagedAttention."
+  },
+  "code_quality": {
+    "codebert_quality_score": 11.66,
+    "codebert_embedding_norm": 21.7496,
+    "readme_perplexity": 13.6,
+    "readme_clarity": "EXCELLENT",
+    "bandit_high": 3,
+    "bandit_medium": 9,
+    "bandit_status": "FAIL",
+    "radon_cc_grade": "B",
+    "radon_cc_score": 5.654761904761905,
+    "python_files": 748,
+    "total_files": 882
+  },
+  "gpu_memory_during_run": {
+    "allocated_mb": 1021.3,
+    "reserved_mb": 1623.2
+  },
+  "seeds": [
+    97595,
+    28932,
+    63131
+  ],
+  "aioss": {
+    "final_chain_hash": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+    "algorithm": "sha3_256"
+  },
+  "source": "Kaggle T4 GPU \u2014 loiskleinner/anticloud-real-benchmarks v4 (2026-09-30)"
+}

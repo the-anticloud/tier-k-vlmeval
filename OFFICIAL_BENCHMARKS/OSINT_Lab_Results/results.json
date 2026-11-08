@@ -1,0 +1,29 @@
+{
+  "benchmark": "OSINT_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:07:07.146295+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_model_load_time_sec": 4.42,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "OSINT-AI Benchmark (INCYBER 2024 + NER eval)",
+    "source": "https://incyber.org/en/article/osint-put-to-the-test-of-ai-exploring-measuring-verifying/",
+    "metadata_completeness": 1.0,
+    "fields_present": 6,
+    "fields_total": 6,
+    "hf_inference": {
+      "hf_ner_status": "PASS",
+      "hf_ner_latency_ms": 66.0,
+      "hf_ner_label": "LABEL_0",
+      "hf_ner_score": 0.5254
+    },
+    "entity_description": "K_VLMEVAL is open-compass/VLMEvalKit, licence Apache-2.0, 855 files"
+  }
+}

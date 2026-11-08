@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 400 80">
+  <rect width="400" height="80" fill="#070e1c" rx="8"/>
+  <text x="20" y="48" font-family="monospace" font-size="20" font-weight="bold" fill="#eba825">ANTICLOUD × VLMEVAL</text>
+  <text x="20" y="67" font-family="monospace" font-size="10" fill="#8a90a0">Vision-language model evaluation under cryptographic audit.</text>
+</svg>

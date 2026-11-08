@@ -1,0 +1,20 @@
+{
+  "benchmark": "Ruff_Linter_Lab_Results",
+  "project": "K_VLMEVAL",
+  "run_timestamp": "2026-09-30T17:14:20.030944+00:00",
+  "source": "https://docs.astral.sh/ruff/",
+  "results": {
+    "framework": "Ruff \u2014 Fast Python Linter (Astral)",
+    "source": "https://docs.astral.sh/ruff/",
+    "files_scanned": 10,
+    "total_issues": 45,
+    "top_issue_codes": {
+      "F401": 9,
+      "PLW1508": 6,
+      "I001": 6,
+      "BLE001": 3,
+      "TRY004": 3
+    },
+    "status": "FAIL"
+  }
+}

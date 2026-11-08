@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dependencies — K_VLMEVAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--a:#c83218;--bg:#f9f8f4;--fg:#0d0d0c;--fg2:#383836;--rule:#d8d4ca}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;font-size:16px;line-height:1.75}
+.hdr{background:#0d0d0c;color:#f0ede4;padding:40px 48px 32px;border-bottom:3px solid var(--a)}
+.hdr h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+.hdr .m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,228,.5)}
+.hdr .m span{color:#c83218;margin-right:14px}
+.c{max-width:840px;margin:0 auto;padding:40px 48px 72px}
+h1{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin:36px 0 12px;border-bottom:2px solid var(--a);padding-bottom:7px}
+h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:28px 0 10px}
+h3{font-size:1.05rem;font-weight:700;margin:20px 0 7px}
+h4{font-size:.95rem;font-weight:600;margin:14px 0 5px;color:var(--fg2)}
+p{margin-bottom:12px;color:var(--fg2)}
+strong{color:var(--fg);font-weight:700}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#e8e4dc;padding:2px 6px;border-radius:2px;color:var(--a)}
+pre{background:#1a1a18;color:#e8e4dc;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;padding:20px;border-radius:6px;overflow-x:auto;margin:16px 0}
+pre code{background:none;color:inherit;padding:0;border-radius:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:first-child td{font-weight:600;background:#fff9ee;border-bottom:2px solid var(--a)}
+li{margin:5px 0 5px 20px;color:var(--fg2)}
+.ftr{background:#0d0d0c;color:rgba(240,237,228,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:14px 48px;text-transform:uppercase}
+@media(max-width:640px){.hdr,.c,.ftr{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Dependencies — K_VLMEVAL</h1>
+  <div class="m"><span>Anticloud FZ LLE</span><span>0-1.gg</span><span>lois@0-1.gg</span><span>Dubai, UAE</span></div>
+</div>
+<div class="c"><p><h1>Dependencies — K_VLMEVAL</h1></p>
+<br>
+<p><strong>Project:</strong> <code>K_VLMEVAL</code></p>
+<p><strong>Tier:</strong> TIER_6_SECURITY_EVAL</p>
+<p><strong>Domain:</strong> security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection</p>
+<p><strong>Maintainer:</strong> Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · Dubai, UAE</p>
+<p><strong>Model:</strong> Anticloud PAX L5 Narrow L2 General 27B</p>
+<p><strong>AIOSS Chain:</strong> <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></p>
+<p><strong>Date:</strong> October 2026</p>
+<br>
+<hr>
+<br>
+<p><h2>Dependency Manifest</h2></p>
+<br>
+<p>All dependencies for <code>K_VLMEVAL</code> are listed here with license information. All dependencies are permissively licensed (Apache 2.0, MIT, BSD) unless otherwise noted.</p>
+<br>
+<p><h2>Runtime Dependencies</h2></p>
+<br>
+<table>
+<tr><td>Package</td><td>Version</td><td>License</td><td>Purpose</td></tr>
+<tr><td>transformers</td><td>≥4.40.0</td><td>Apache 2.0</td><td>PAX 27B model loading and inference</td></tr>
+<tr><td>accelerate</td><td>≥0.30.0</td><td>Apache 2.0</td><td>Multi-GPU and device mapping</td></tr>
+<tr><td>bitsandbytes</td><td>≥0.43.0</td><td>MIT</td><td>Q4 quantization</td></tr>
+<tr><td>torch</td><td>≥2.2.0</td><td>BSD-3</td><td>Core tensor operations</td></tr>
+<tr><td>numpy</td><td>≥1.26.0</td><td>BSD-3</td><td>Numerical computation</td></tr>
+<tr><td>scipy</td><td>≥1.12.0</td><td>BSD-3</td><td>Scientific computation</td></tr>
+<tr><td>requests</td><td>≥2.31.0</td><td>Apache 2.0</td><td>HTTP client for API integration</td></tr>
+<tr><td>cryptography</td><td>≥42.0.0</td><td>Apache 2.0 / BSD</td><td>SHA3-256, Ed25519, AES-256-GCM</td></tr>
+<tr><td>pydantic</td><td>≥2.5.0</td><td>MIT</td><td>Typed data validation for SoT</td></tr>
+</table>
+<br>
+<p><h2>Development Dependencies</h2></p>
+<br>
+<table>
+<tr><td>Package</td><td>License</td><td>Purpose</td></tr>
+<tr><td>pytest</td><td>MIT</td><td>Unit and integration testing</td></tr>
+<tr><td>black</td><td>MIT</td><td>Code formatting</td></tr>
+<tr><td>mypy</td><td>MIT</td><td>Static type checking</td></tr>
+<tr><td>ruff</td><td>MIT</td><td>Linting</td></tr>
+<tr><td>reportlab</td><td>BSD</td><td>PDF generation</td></tr>
+<tr><td>python-docx</td><td>MIT</td><td>DOCX generation</td></tr>
+<tr><td>python-pptx</td><td>MIT</td><td>PPTX generation</td></tr>
+</table>
+<br>
+<p><h2>License Compatibility Matrix</h2></p>
+<br>
+<p>All dependencies are compatible with Apache 2.0 and the Anticommons Enterprise License 1.0. No GPL, LGPL, or copyleft dependencies are included.</p>
+<br>
+<table>
+<tr><td>License Type</td><td>Count</td><td>Compatibility</td></tr>
+<tr><td>Apache 2.0</td><td>Primary</td><td>✓ Fully compatible</td></tr>
+<tr><td>MIT</td><td>Common</td><td>✓ Fully compatible</td></tr>
+<tr><td>BSD-3-Clause</td><td>Common</td><td>✓ Fully compatible</td></tr>
+<tr><td>GPL/LGPL</td><td>0</td><td>N/A — excluded</td></tr>
+</table>
+<br>
+<p><h2>Dependency Security</h2></p>
+<br>
+<p>Dependencies are scanned via OpenSSF Scorecard (current score: 6.28/10) and audited quarterly via:</p>
+<p><code>`</code>bash</p>
+<p>pip-audit --requirement requirements.txt</p>
+<p>safety check</p>
+<p><code>`</code></p>
+<br>
+<p><strong>Dependency enquiries:</strong> lois@0-1.gg</p>
+<br></div>
+<div class="ftr">Anticloud FZ LLE · AIOSS: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560 · Apache 2.0 / Anticommons Enterprise License 1.0</div>
+</body>
+</html>

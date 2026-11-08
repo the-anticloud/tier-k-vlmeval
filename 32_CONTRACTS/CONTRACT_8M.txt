@@ -1,0 +1,142 @@
+Enterprise License Agreement — $8,000,000
+*Contract Tier: Enterprise | Scope:* 36-month enterprise license + dedicated support
+*Anticloud FZ LLE · 0-1.gg · sales@0-1.gg*
+*Date: October 2026 | Project:* K Vlmeval
+
+---
+
+Parties
+
+*Licensor:* Anticloud FZ LLE, Dubai UAE (UAE Free Zone Limited Liability Establishment)
+*Contact:* sales@0-1.gg | lois@0-1.gg | 0-1.gg
+
+*Licensee:* [COMPANY NAME]
+*Jurisdiction:* [COUNTRY / STATE]
+*Authorized Signatory:* [NAME, TITLE]
+
+---
+
+License Grant
+
+Anticloud FZ LLE grants the Licensee a *non-exclusive, non-transferable* license to:
+
+1. Deploy PAX L5 Narrow L2 General 27B and associated Anticloud infrastructure within Licensee's private, air-gapped, or cloud environments
+2. Integrate Anticloud APIs and SDKs into Licensee's products and services
+3. Use the AIOSS Ledger format for Licensee's internal audit and compliance requirements
+4. Access Anticloud support, documentation, and updates during the license term
+
+*Scope:* 36-month enterprise license + dedicated support
+*Annual Contract Value:* $8,000,000
+*Notes:* Strategic anchor
+
+---
+
+Term
+
+| Parameter | Value |
+|---|---|
+| Contract Value | $8,000,000 |
+| Term | 36 months |
+| Payment | Annual in advance |
+| Renewal | Auto-renew unless 90-day written notice |
+| Termination for cause | 30-day cure period |
+
+---
+
+Deliverables
+
+| Deliverable | Timeline |
+|---|---|
+| Model weights + inference binary | Within 5 business days of signing |
+| Integration documentation (API, SDK) | Within 10 business days |
+| AIOSS Ledger format specification | At signing |
+| Support SLA activation | Within 2 business days |
+| Dedicated engineer (Enterprise+) | Within 30 days | Included |
+| FedRAMP compliance package | N/A |
+
+---
+
+Support & SLA
+
+| Tier | Response Time | Coverage |
+|---|---|---|
+| Gold | 1hr 24/7 | All + emergency |
+| Uptime commitment | 99.9% | On Licensee's infrastructure |
+| Security patch | 30 days | Critical: 72 hours |
+
+---
+
+Fees & Payment
+
+| Component | Fee |
+|---|---|
+| Base license fee | $8,000,000 |
+| Annual renewal (same rate) | At renewal |
+| Professional services (optional) | $350/hr or fixed-fee SOW |
+| Overage tokens (above tier) | $0.08/1M tokens |
+| White-label rights | Not included — see Enterprise or OEM tier |
+
+---
+
+Intellectual Property
+
+1. *Anticloud retains* all IP in PAX, AIOSS Ledger, Kantor K5, and associated technology
+2. *Licensee retains* all IP in Licensee's own code, data, and derivative works
+3. *Patent pending* (USPTO): Kantor Post-Quantum Hash, AIOSS Ledger Format, Anticode Agent Architecture
+4. *Attribution:* "Powered by PAX — Anticloud FZ LLE" required in commercial deployments
+5. *No reverse engineering* of model weights, AIOSS chain, or security modules
+
+---
+
+Confidentiality
+
+Both parties agree to maintain confidentiality of:
+- Model architecture details provided under NDA
+- Pricing and commercial terms
+- Customer deployment configurations
+- Any technical specifications marked "Confidential"
+
+*Duration:* 5 years from execution, or 3 years post-termination, whichever is longer.
+
+---
+
+Compliance & Audit
+
+- HIPAA: Licensee is responsible for BAA if processing PHI
+- FedRAMP: Available as add-on — contact sales@0-1.gg
+- GDPR: No data egress by design; Licensee controls all data residency
+- AIOSS Ledger provides cryptographic audit trail for all inference requests
+- Anticloud audit right: Annual, with 30-day notice, to verify compliance
+
+---
+
+Limitation of Liability
+
+Anticloud's total liability shall not exceed the fees paid in the 12 months preceding the claim, except for:
+- Willful misconduct or gross negligence (uncapped)
+- Confidentiality breach (uncapped for 3 years)
+- IP indemnification claims (per Enterprise Indemnification Rider)
+
+---
+
+Governing Law
+
+UAE law (DIFC Courts for international disputes), or as mutually agreed.
+
+---
+
+Execution
+
+| | Anticloud FZ LLE | Licensee |
+|---|---|---|
+| Signatory | Lois-Kleinner Alpasan, CEO | [NAME, TITLE] |
+| Date | October 2026 | [DATE] |
+| Signature | _________________ | _________________ |
+| Email | sales@0-1.gg | [EMAIL] |
+
+---
+
+To execute: email signed copy to sales@0-1.gg
+Questions: lois@0-1.gg
+Anticloud FZ LLE · UAE Free Zone Limited Liability Establishment
+Patent Pending (USPTO) · Harvard Dataverse DOI 10.7910/DVN/YMJKOG

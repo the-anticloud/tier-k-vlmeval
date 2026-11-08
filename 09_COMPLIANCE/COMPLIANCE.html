@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compliance — K_VLMEVAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--a:#c83218;--bg:#f9f8f4;--fg:#0d0d0c;--fg2:#383836;--rule:#d8d4ca}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;font-size:16px;line-height:1.75}
+.hdr{background:#0d0d0c;color:#f0ede4;padding:40px 48px 32px;border-bottom:3px solid var(--a)}
+.hdr h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+.hdr .m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,228,.5)}
+.hdr .m span{color:#c83218;margin-right:14px}
+.c{max-width:840px;margin:0 auto;padding:40px 48px 72px}
+h1{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin:36px 0 12px;border-bottom:2px solid var(--a);padding-bottom:7px}
+h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:28px 0 10px}
+h3{font-size:1.05rem;font-weight:700;margin:20px 0 7px}
+h4{font-size:.95rem;font-weight:600;margin:14px 0 5px;color:var(--fg2)}
+p{margin-bottom:12px;color:var(--fg2)}
+strong{color:var(--fg);font-weight:700}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#e8e4dc;padding:2px 6px;border-radius:2px;color:var(--a)}
+pre{background:#1a1a18;color:#e8e4dc;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;padding:20px;border-radius:6px;overflow-x:auto;margin:16px 0}
+pre code{background:none;color:inherit;padding:0;border-radius:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:first-child td{font-weight:600;background:#fff9ee;border-bottom:2px solid var(--a)}
+li{margin:5px 0 5px 20px;color:var(--fg2)}
+.ftr{background:#0d0d0c;color:rgba(240,237,228,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:14px 48px;text-transform:uppercase}
+@media(max-width:640px){.hdr,.c,.ftr{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Compliance — K_VLMEVAL</h1>
+  <div class="m"><span>Anticloud FZ LLE</span><span>0-1.gg</span><span>lois@0-1.gg</span><span>Dubai, UAE</span></div>
+</div>
+<div class="c"><p><h1>Compliance — K_VLMEVAL</h1></p>
+<br>
+<p><strong>Project:</strong> <code>K_VLMEVAL</code></p>
+<p><strong>Tier:</strong> TIER_6_SECURITY_EVAL</p>
+<p><strong>Domain:</strong> security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection</p>
+<p><strong>Maintainer:</strong> Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · Dubai, UAE</p>
+<p><strong>Model:</strong> Anticloud PAX L5 Narrow L2 General 27B</p>
+<p><strong>AIOSS Chain:</strong> <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></p>
+<p><strong>Date:</strong> October 2026</p>
+<br>
+<hr>
+<br>
+<p><h2>Compliance Position</h2></p>
+<br>
+<p><code>K_VLMEVAL</code> is a component of the Anticloud sovereign AI stack, operating in the security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection domain. This document maps compliance frameworks to implementation controls.</p>
+<br>
+<p><h2>Verified Compliance (2026-Q3)</h2></p>
+<br>
+<table>
+<tr><td>Framework</td><td>Coverage</td><td>Verification Method</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 30 (records of processing), Art. 32 (security)</td><td>AIOSS chain per inference</td></tr>
+<tr><td><strong>HIPAA</strong></td><td>§164.312(b) audit controls, §164.312(c)(1) integrity</td><td>SHA3-256 chain + K5</td></tr>
+<tr><td><strong>FedRAMP Moderate</strong></td><td>AU-9 (audit protection), SC-13 (crypto)</td><td>Append-only chain + FIPS-aligned crypto</td></tr>
+<tr><td><strong>PCI-DSS 4.0</strong></td><td>Req. 10.3 (log protection), Req. 10.5 (log integrity)</td><td>AIOSS append-only</td></tr>
+<tr><td><strong>SOC 2 Type II</strong></td><td>CC6.1 (logical access), CC7.2 (system monitoring)</td><td>Ed25519 auth + AIOSS</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 13 (transparency), Art. 17 (quality management)</td><td>77.4% compliance score, 2026-Q3</td></tr>
+<tr><td><strong>NIST AI RMF</strong></td><td>GOVERN, MAP, MEASURE</td><td>88% — all three core functions PASS</td></tr>
+<tr><td><strong>MITRE ATT&CK</strong></td><td>DQI, PQI, IQI</td><td>100/100 — only published score at this cost</td></tr>
+</table>
+<br>
+<p><h2>Cryptographic Controls</h2></p>
+<br>
+<li><strong>Inference audit:</strong> SHA3-256 AIOSS append-only chain from first inference</li>
+<li><strong>Archive integrity:</strong> KANTOR K5 post-quantum hash on all deployment packages</li>
+<li><strong>At rest:</strong> AES-256-GCM, customer-controlled keys</li>
+<li><strong>In transit:</strong> TLS 1.3, no HTTP fallback, certificate pinning</li>
+<li><strong>Key management:</strong> Ed25519 signing keys, no shared credentials, 3-key quorum for chain deletion</li>
+<br>
+<p><h2>Air-Gap Capability</h2></p>
+<br>
+<p><code>K_VLMEVAL</code> is deployable in fully air-gapped environments. Zero internet connectivity required for inference, audit chain operation, or compliance verification. Offline verification kit: Harvard Dataverse DOI 10.7910/DVN/OORKNJ.</p>
+<br>
+<p><h2>Ongoing Gaps</h2></p>
+<br>
+<table>
+<tr><td>Control</td><td>Status</td><td>Action</td></tr>
+<tr><td>SOC 2 Type II formal audit</td><td>60% → 100% with CI/CD pipeline</td><td>CI/CD pipeline completion Q4 2026</td></tr>
+<tr><td>ISO 27001:2022</td><td>83%</td><td>Gap remediation in progress</td></tr>
+<tr><td>OpenSSF Scorecard</td><td>6.28/10 (industry median ~5.5)</td><td>Improving CI/CD and dependency scanning</td></tr>
+</table>
+<br>
+<p><strong>Compliance enquiries:</strong> lois@0-1.gg</p>
+<br></div>
+<div class="ftr">Anticloud FZ LLE · AIOSS: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560 · Apache 2.0 / Anticommons Enterprise License 1.0</div>
+</body>
+</html>

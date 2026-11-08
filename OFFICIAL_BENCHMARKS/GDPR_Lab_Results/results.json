@@ -1,0 +1,50 @@
+{
+  "benchmark": "GDPR_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_load_time_sec": 2.96,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "GDPR (EU) 2016/679",
+    "source": "https://gdpr-info.eu/",
+    "checks": [
+      {
+        "id": "Art.25",
+        "name": "Data Protection by Design",
+        "status": "PASS"
+      },
+      {
+        "id": "Art.30",
+        "name": "Records of Processing",
+        "status": "PASS"
+      },
+      {
+        "id": "Art.32",
+        "name": "Security of Processing",
+        "status": "PASS"
+      },
+      {
+        "id": "Art.35",
+        "name": "Data Protection Impact Assessment",
+        "status": "PASS"
+      },
+      {
+        "id": "Art.44",
+        "name": "Transfers to Third Countries",
+        "status": "PASS"
+      }
+    ],
+    "passed": 5,
+    "total": 5,
+    "conformance_pct": 100,
+    "status": "COMPLIANT"
+  }
+}

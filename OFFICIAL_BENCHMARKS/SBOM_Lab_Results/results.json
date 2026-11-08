@@ -1,0 +1,61 @@
+{
+  "benchmark": "SBOM_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_load_time_sec": 2.96,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "SBOM \u2014 NTIA Minimum Elements + CycloneDX/SPDX proxy",
+    "source": "https://ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf",
+    "indicators": [
+      {
+        "field": "requirements_txt",
+        "present": true
+      },
+      {
+        "field": "pyproject_toml",
+        "present": false
+      },
+      {
+        "field": "setup_py",
+        "present": true
+      },
+      {
+        "field": "package_json",
+        "present": false
+      },
+      {
+        "field": "cargo_toml",
+        "present": false
+      },
+      {
+        "field": "go_mod",
+        "present": false
+      },
+      {
+        "field": "licence_file",
+        "present": true
+      },
+      {
+        "field": "authors_documented",
+        "present": true
+      },
+      {
+        "field": "version_pinned",
+        "present": true
+      }
+    ],
+    "present": 5,
+    "total": 9,
+    "completeness_pct": 56,
+    "status": "PASS"
+  }
+}

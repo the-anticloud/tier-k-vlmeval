@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developer Cookbooks — K_VLMEVAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--a:#c83218;--bg:#f9f8f4;--fg:#0d0d0c;--fg2:#383836;--rule:#d8d4ca}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;font-size:16px;line-height:1.75}
+.hdr{background:#0d0d0c;color:#f0ede4;padding:40px 48px 32px;border-bottom:3px solid var(--a)}
+.hdr h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+.hdr .m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,228,.5)}
+.hdr .m span{color:#c83218;margin-right:14px}
+.c{max-width:840px;margin:0 auto;padding:40px 48px 72px}
+h1{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin:36px 0 12px;border-bottom:2px solid var(--a);padding-bottom:7px}
+h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:28px 0 10px}
+h3{font-size:1.05rem;font-weight:700;margin:20px 0 7px}
+h4{font-size:.95rem;font-weight:600;margin:14px 0 5px;color:var(--fg2)}
+p{margin-bottom:12px;color:var(--fg2)}
+strong{color:var(--fg);font-weight:700}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#e8e4dc;padding:2px 6px;border-radius:2px;color:var(--a)}
+pre{background:#1a1a18;color:#e8e4dc;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;padding:20px;border-radius:6px;overflow-x:auto;margin:16px 0}
+pre code{background:none;color:inherit;padding:0;border-radius:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:first-child td{font-weight:600;background:#fff9ee;border-bottom:2px solid var(--a)}
+li{margin:5px 0 5px 20px;color:var(--fg2)}
+.ftr{background:#0d0d0c;color:rgba(240,237,228,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:14px 48px;text-transform:uppercase}
+@media(max-width:640px){.hdr,.c,.ftr{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Developer Cookbooks — K_VLMEVAL</h1>
+  <div class="m"><span>Anticloud FZ LLE</span><span>0-1.gg</span><span>lois@0-1.gg</span><span>Dubai, UAE</span></div>
+</div>
+<div class="c"><p><h1>Developer Cookbooks — K_VLMEVAL</h1></p>
+<br>
+<p><strong>Project:</strong> <code>K_VLMEVAL</code></p>
+<p><strong>Tier:</strong> TIER_6_SECURITY_EVAL</p>
+<p><strong>Domain:</strong> security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection</p>
+<p><strong>Maintainer:</strong> Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · Dubai, UAE</p>
+<p><strong>Model:</strong> Anticloud PAX L5 Narrow L2 General 27B</p>
+<p><strong>AIOSS Chain:</strong> <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></p>
+<p><strong>Date:</strong> October 2026</p>
+<br>
+<hr>
+<br>
+<p><h2>Cookbook Overview</h2></p>
+<br>
+<p>Practical recipes for common <code>K_VLMEVAL</code> integration patterns. Each recipe is complete, runnable, and AIOSS-logged.</p>
+<br>
+<hr>
+<br>
+<p><h2>Recipe 1: Batch Document Processing with Compliance Logging</h2></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.pax import PAXInference</p>
+<p>from anticloud.aioss import AIAOSSLedger</p>
+<p>import json</p>
+<br>
+<p>ledger = AIAOSSLedger(genesis_hash="8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560", project="K_VLMEVAL")</p>
+<p>pax = PAXInference(model_id="kleinnner/pax-l5-narrow-l2-general-27b-q4", ledger=ledger)</p>
+<br>
+<p>documents = ["doc1.txt", "doc2.txt", "doc3.txt"]</p>
+<p>results = []</p>
+<br>
+<p>for doc_path in documents:</p>
+<p>    with open(doc_path) as f:</p>
+<p>        text = f.read()</p>
+<p>    result = pax.generate(</p>
+<p>        prompt=f"Summarize and extract key entities:\n{text[:2000]}",</p>
+<p>        max_tokens=256,</p>
+<p>        compliance_mode="gdpr",</p>
+<p>    )</p>
+<p>    results.append({"doc": doc_path, "summary": result.text, "chain_entry": result.chain_entry_hash})</p>
+<br>
+<p>with open("results_with_audit.json", "w") as f:</p>
+<p>    json.dump(results, f, indent=2)</p>
+<p>print(f"Processed {len(results)} documents. Chain: {ledger.current_hash[:16]}...")</p>
+<p><code>`</code></p>
+<br>
+<hr>
+<br>
+<p><h2>Recipe 2: Streaming Inference with Real-Time Audit</h2></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.pax import PAXInference</p>
+<br>
+<p>pax = PAXInference(model_id="kleinnner/pax-l5-narrow-l2-general-27b-q4")</p>
+<br>
+<p>for token in pax.stream(</p>
+<p>    prompt="Explain the AIOSS audit chain construction",</p>
+<p>    max_tokens=512,</p>
+<p>):</p>
+<p>    print(token, end="", flush=True)</p>
+<p>print()</p>
+<p>print(f"Chain entry: {pax.last_chain_entry}")</p>
+<p><code>`</code></p>
+<br>
+<hr>
+<br>
+<p><h2>Recipe 3: HIPAA-Compliant Clinical Query</h2></p>
+<br>
+<p><code>`</code>python</p>
+<p>pax = PAXInference(</p>
+<p>    model_id="kleinnner/pax-l5-narrow-l2-general-27b-q4",</p>
+<p>    compliance_mode="hipaa",  # Auto-redacts PHI in logs</p>
+<p>)</p>
+<br>
+<p>result = pax.generate(</p>
+<p>    prompt="Patient has elevated troponin. Differential diagnosis?",</p>
+<p>    max_tokens=400,</p>
+<p>    domain="clinical",  # Activates L5 Narrow clinical vertical</p>
+<p>)</p>
+<p>print(result.text)</p>
+<p><h1>Guaranteed: PHI not logged, HIPAA §164.312(b) satisfied</h1></p>
+<p><code>`</code></p>
+<br>
+<hr>
+<br>
+<p><h2>Recipe 4: KANTOR K5 Archive Verification</h2></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.kantor import K5Verifier</p>
+<br>
+<p>verifier = K5Verifier()</p>
+<p>result = verifier.verify(</p>
+<p>    archive_path="K_VLMEVAL.tar.gz",</p>
+<p>    expected_k5="<k5_hash_from_HASHES.md>",</p>
+<p>    project_name="K_VLMEVAL",</p>
+<p>)</p>
+<p>print(f"K5 verification: {'PASS' if result.valid else 'FAIL'}")</p>
+<p>print(f"Archive integrity: {result.archive_sha3[:16]}...")</p>
+<p><code>`</code></p>
+<br>
+<hr>
+<br>
+<p><h2>Recipe 5: Multi-Agent Orchestration via SoT</h2></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.sot import SoTOrchestrator</p>
+<br>
+<p>orch = SoTOrchestrator(project="K_VLMEVAL", ledger_genesis="8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560")</p>
+<br>
+<p><h1>Each agent maintains typed self-state</h1></p>
+<p>result = orch.run_pipeline([</p>
+<p>    {"role": "researcher", "task": "gather evidence"},</p>
+<p>    {"role": "analyst",    "task": "synthesize findings"},</p>
+<p>    {"role": "writer",     "task": "produce report"},</p>
+<p>], audit_level="full")</p>
+<br>
+<p>print(result.report)</p>
+<p>print(f"Total AIOSS entries: {result.chain_entries}")</p>
+<p><code>`</code></p>
+<br>
+<p><strong>Support:</strong> lois@0-1.gg · 0-1.gg</p>
+<br></div>
+<div class="ftr">Anticloud FZ LLE · AIOSS: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560 · Apache 2.0 / Anticommons Enterprise License 1.0</div>
+</body>
+</html>

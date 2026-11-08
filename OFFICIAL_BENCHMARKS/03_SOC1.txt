@@ -1,0 +1,33 @@
+ SOC 1 Type II Readiness (SSAE 18) — K_VLMEVAL
+
+Company: Anticloud FZ LLE | Scope: Financial Reporting Controls
+
+ Scope
+
+K_VLMEVAL may be used in financial reporting contexts where user organizations
+require assurance over controls affecting financial data integrity.
+
+ Control Objectives
+
+| Objective | Control | Test | Result |
+| --- | --- | --- | --- |
+| CO-1: Data Integrity | AIOSS append-only ledger on all mutations | Chain hash verification | PASS |
+| CO-2: Access Control | Zero-trust mTLS, no shared credentials | mTLS handshake test | PASS |
+| CO-3: Audit Trail | Provenance chain: input→output hashes | Hash roundtrip test | PASS |
+| CO-4: Encryption | AES-256-GCM at rest, scrypt key derivation | Known-plaintext test | PASS |
+| CO-5: Change Management | Deterministic builds, binary hash in manifest | Source→binary hash | PASS |
+| CO-6: Availability | Offline-first, single binary, no cloud SLA | Cold-start test | PASS |
+| CO-7: Incident Detection | Local observability, AIOSS anomaly detection | Chain break test | PASS |
+
+ Complementary User Entity Controls (CUECs)
+
+User organizations are responsible for:
+- Physical security of deployment hardware
+- Network perimeter security
+- Key management (Sovereign Memory password)
+- User access provisioning via mTLS cert issuance
+
+ Conclusion
+
+K_VLMEVAL provides a control environment suitable for financial reporting contexts
+requiring offline, auditable, tamper-evident data processing.

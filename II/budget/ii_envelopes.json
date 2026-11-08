@@ -1,0 +1,85 @@
+{
+  "project": {
+    "budget_id": "II-K_VLMEVAL",
+    "scope": "project",
+    "cap": 1500.0,
+    "shadow_usd": 37.5,
+    "warning_threshold": 0.8,
+    "escalation_threshold": 0.95,
+    "red_line": null,
+    "unit": "IIU",
+    "escalator": "operator approval required above escalation threshold"
+  },
+  "inference": {
+    "budget_id": "II-K_VLMEVAL-inference",
+    "scope": "inference",
+    "cap": 400.0,
+    "shadow_usd": 4.0,
+    "warning_threshold": 0.8,
+    "escalation_threshold": 0.95,
+    "red_line": null,
+    "unit": "IIU",
+    "escalator": "operator approval required above escalation threshold",
+    "basis": "policy"
+  },
+  "world_model": {
+    "budget_id": "II-K_VLMEVAL-world_model",
+    "scope": "world_model",
+    "cap": 600.0,
+    "shadow_usd": 6.0,
+    "warning_threshold": 0.8,
+    "escalation_threshold": 0.95,
+    "red_line": null,
+    "unit": "IIU",
+    "escalator": "operator approval required above escalation threshold",
+    "basis": "policy"
+  },
+  "security": {
+    "budget_id": "II-K_VLMEVAL-security",
+    "scope": "security",
+    "cap": 500.0,
+    "shadow_usd": 12.5,
+    "warning_threshold": 0.8,
+    "escalation_threshold": 0.95,
+    "red_line": null,
+    "unit": "IIU",
+    "escalator": "operator approval required above escalation threshold",
+    "basis": "policy"
+  },
+  "compliance": {
+    "budget_id": "II-K_VLMEVAL-compliance",
+    "scope": "compliance",
+    "cap": 200.0,
+    "shadow_usd": 0.4,
+    "warning_threshold": 0.8,
+    "escalation_threshold": 0.95,
+    "red_line": null,
+    "unit": "IIU",
+    "escalator": "operator approval required above escalation threshold",
+    "basis": "policy"
+  },
+  "governance": {
+    "budget_id": "II-K_VLMEVAL-governance",
+    "scope": "governance",
+    "cap": 150.0,
+    "shadow_usd": 0.3,
+    "warning_threshold": 0.8,
+    "escalation_threshold": 0.95,
+    "red_line": null,
+    "unit": "IIU",
+    "escalator": "operator approval required above escalation threshold",
+    "basis": "policy"
+  },
+  "education": {
+    "budget_id": "II-K_VLMEVAL-education",
+    "scope": "education",
+    "cap": 250.0,
+    "shadow_usd": 1.0,
+    "warning_threshold": 0.8,
+    "escalation_threshold": 0.95,
+    "red_line": null,
+    "unit": "IIU",
+    "escalator": "operator approval required above escalation threshold",
+    "basis": "policy"
+  }
+}

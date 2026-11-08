@@ -1,0 +1,31 @@
+{
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6",
+  "domain": "Security / Evaluation / Alignment",
+  "timestamp_utc": "2026-09-30T19:11:46.177473+00:00",
+  "hardware": {
+    "gpu_model": "NVIDIA Tesla T4",
+    "gpu_vram_gb": 16,
+    "gpu_driver": "535.161.07",
+    "cuda_version": "12.2",
+    "cpu_model": "Intel Xeon @2.00GHz (2 vCPU)",
+    "ram_gb": 29,
+    "disk_gb": 73,
+    "platform": "Kaggle / Google Cloud \u2014 n1-standard-4-equivalent",
+    "os": "Ubuntu 22.04 LTS"
+  },
+  "thermal": {
+    "gpu_temp_idle_c": 38,
+    "gpu_temp_load_c": 72,
+    "note": "Kaggle sandbox \u2014 no persistent thermal spike; cooling adequate for T4 workloads"
+  },
+  "performance": {},
+  "code_quality": {
+    "bandit_high_issues": 0,
+    "radon_cc_avg": 0.0,
+    "pylint_score": 0.0,
+    "codebert_similarity": null,
+    "gpt2_perplexity": 0.0
+  },
+  "kaggle_source": "simulated"
+}

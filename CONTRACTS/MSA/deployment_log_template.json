@@ -1,0 +1,19 @@
+{
+  "project": "K_VLMEVAL",
+  "tier": "T6",
+  "template_version": "1.0",
+  "fields": {
+    "deployment_id": "UUID assigned at deployment",
+    "customer": "Organization name",
+    "license_tier": "One of: Starter/Professional/Enterprise/Government",
+    "deployment_date": "ISO8601",
+    "aioss_chain_hash": "SHA3-256 hash at time of deployment",
+    "aioss_version": "aioss binary version",
+    "environment": "production/staging/air-gap",
+    "expiry": "ISO8601 license expiry date",
+    "contacts": {
+      "technical": "email",
+      "billing": "email"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "patch_id": "K_VLMEVAL-egress-001",
+    "project": "K_VLMEVAL",
+    "target": "UPSTREAM/vlmeval/_anticloud_egress.py",
+    "kind": "behaviour",
+    "summary": "enforce declared offline posture",
+    "behaviour_change": "with ANTICLOUD_OFFLINE=1, any socket connection to a hosted frontier API raises EgressDenied instead of dialling out",
+    "test": "tests/upstream/test_egress_guard.py::test_frontier_host_denied_when_offline",
+    "rationale": "the project claimed offline operation without enforcing it; this makes the claim testable rather than asserted",
+    "licence": "Apache-2.0",
+    "licence_class": "permissive",
+    "obligations": [],
+    "applied": true,
+    "patch": "diff --git a/vlmeval/_anticloud_egress.py b/vlmeval/_anticloud_egress.py\nnew file mode 100644\nindex 0000000..a521e2c\n--- /dev/null\n+++ b/vlmeval/_anticloud_egress.py\n@@ -0,0 +1,69 @@\n+\"\"\"Anticloud egress guard (behaviour-changing patch).\n+\n+Added by Anticloud. Refuses hosted frontier API calls so this repository\n+honours its declared offline posture instead of merely asserting it.\n+\n+Licence interaction: this file is licensed Apache-2.0 OR\n+LicenseRef-Anticommons-Enterprise-1.0 and is kept in a separate module so the\n+upstream tree's own licence is not extended over it.\n+\"\"\"\n+\n+from __future__ import annotations\n+\n+import os\n+import socket\n+\n+__all__ = [\"EgressDenied\", \"guarded_connect\", \"is_offline\"]\n+\n+_OFFLINE = \"ANTICLOUD_OFFLINE\"\n+\n+#: Hosts that mean \"someone else's paid, hosted model\".\n+_FRONTIER_MARKERS = (\n+    \"api.openai.com\", \"api.anthropic.com\", \"api.cohere.ai\",\n+    \"api.mistral.ai\", \"api.groq.com\", \"api.together.xyz\",\n+    \"api.deepseek.com\", \"generativelanguage.googleapis.com\",\n+    \"api.perplexity.ai\", \"openrouter.ai\", \"api.fireworks.ai\",\n+)\n+\n+\n+class EgressDenied(PermissionError):\n+    \"\"\"Raised when a blocked host is contacted while offline mode is on.\"\"\"\n+\n+\n+def is_offline() -> bool:\n+    value = os.environ.get(_OFFLINE, \"\").strip().lower()\n+    return value not in (\"\", \"0\", \"false\", \"no\")\n+\n+\n+def _is_frontier(host: str) -> bool:\n+    h = (host or \"\").lower().split(\":\")[0]\n+    return any(h == m or h.endswith(\".\" + m) for m in _FRONTIER_MARKERS)\n+\n+\n+def guarded_connect(address, *args, **kwargs):\n+    \"\"\"Drop-in `socket.create_connection` replacement.\n+\n+    Local addresses are always permitted: an offline guarantee is about\n+    hosted frontier spend, not about a model running on this machine.\n+    \"\"\"\n+    host = address[0] if isinstance(address, tuple) else address\n+    if is_offline() and _is_frontier(str(host)):\n+        raise EgressDenied(\n+            f\"offline mode: refusing connection to frontier host {host!r}. \"\n+            f\"Set {_OFFLINE}=0 to allow, or run the model locally.\")\n+    return _ORIGINAL(address, *args, **kwargs)\n+\n+\n+_ORIGINAL = socket.create_connection\n+_PATCHED = False\n+\n+\n+def install() -> bool:\n+    \"\"\"Idempotently install the guard. Returns True if it is now active.\"\"\"\n+    global _PATCHED\n+    if not is_offline():\n+        return False\n+    if not _PATCHED:\n+        socket.create_connection = guarded_connect\n+        _PATCHED = True\n+    return True\n"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "benchmark": "SOC2_Lab_Results",
+  "title": "SOC 2 Type II Readiness Guide",
+  "source": "https://soc2auditors.org/insights/soc-2-for-ai-companies/",
+  "generated": "2026-09-30T15:17:39.312703+00:00",
+  "content_preview": "## SOC 2 Type II \u2014 AI Company Readiness Guide (2026)\n\n### Five Trust Service Criteria\n1. **Security (CC6-CC9)** \u2014 Access controls, encryption, monitoring\n2. **Availability (A1)** \u2014 Uptime SLAs, disast..."
+}

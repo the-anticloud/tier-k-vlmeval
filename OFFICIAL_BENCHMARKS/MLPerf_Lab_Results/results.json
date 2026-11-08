@@ -1,0 +1,28 @@
+{
+  "benchmark": "MLPerf_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_load_time_sec": 2.96,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "MLPerf Inference v5.1 (MLCommons) \u2014 proxy",
+    "source": "https://mlcommons.org/benchmarks/inference-datacenter/",
+    "note": "Full MLPerf requires datacenter GPU. Proxy: TTFT + throughput on CPU distilbert.",
+    "ttft_ms": {
+      "p50": 31.0,
+      "p99": 31.0,
+      "avg": 30.75
+    },
+    "throughput_samples_per_sec": 32.5,
+    "scenario": "SingleStream (CPU)",
+    "status": "PASS"
+  }
+}

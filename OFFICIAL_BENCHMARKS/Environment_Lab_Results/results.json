@@ -1,0 +1,63 @@
+{
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "run_ts": "2026-09-30T19:03:55.522199+00:00",
+  "platform": {
+    "os": "Windows 10",
+    "python": "3.12.10",
+    "cpu": "Intel64 Family 6 Model 60 Stepping 3, GenuineIntel",
+    "cpu_cores": 8,
+    "ram_gb": 23.91,
+    "disk_free_gb": 430.09,
+    "architecture": "AMD64"
+  },
+  "gpu": {
+    "available": false,
+    "name": null,
+    "vram_gb": null,
+    "driver": null,
+    "note": "nvidia-smi not found \u2014 run on Kaggle T4 for GPU benchmarks"
+  },
+  "inference_speed": {
+    "tokens_per_sec": null,
+    "latency_p50_ms": null,
+    "latency_p99_ms": null,
+    "throughput_req_per_sec": null,
+    "note": "GPU required \u2014 run notebook at https://www.kaggle.com/code/loiskleinner/anticloud-real-benchmarks"
+  },
+  "kv_cache": {
+    "size_mb": null,
+    "pages": null,
+    "utilization_pct": null,
+    "note": "vLLM PagedAttention \u2014 requires model loaded in GPU memory"
+  },
+  "aioss_ledger": {
+    "chain_valid": true,
+    "entries": 0,
+    "format": "sha3_256_chained",
+    "binary": "aioss (Rust, pending public release)",
+    "note": "Ledger integrity verified at write time via SHA3-256 chain"
+  },
+  "codebase": {
+    "total_files": 887,
+    "python_files": 747
+  },
+  "bandit": {
+    "high": null,
+    "medium": null,
+    "status": null
+  },
+  "radon": {
+    "cc_grade": null,
+    "cc_score": null
+  },
+  "reproducibility": {
+    "seeds": [
+      97595,
+      28932,
+      63131
+    ],
+    "seed_method": "sha256(project_name)[:8] + offsets [0, 31337, 65536]",
+    "helm_standard": true
+  }
+}

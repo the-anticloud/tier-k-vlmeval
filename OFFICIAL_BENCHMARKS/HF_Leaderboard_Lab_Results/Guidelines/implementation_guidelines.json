@@ -1,0 +1,7 @@
+{
+  "benchmark": "HF_Leaderboard_Lab_Results",
+  "title": "HuggingFace Leaderboard Benchmarking Strategy",
+  "source": "https://huggingface.co/docs/leaderboards/en/open_llm_leaderboard/archive",
+  "generated": "2026-09-30T15:17:39.312703+00:00",
+  "content_preview": "## HuggingFace Open LLM Leaderboard \u2014 Benchmarking Guide\n\n### Full Benchmark Suite (requires GPU)\n| Benchmark | Metric | What It Tests |\n| --------- | ------ | ------------- |\n| **MMLU** (5-shot) | Ac..."
+}

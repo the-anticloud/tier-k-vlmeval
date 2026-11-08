@@ -1,0 +1,7 @@
+{
+  "benchmark": "OSINT_Lab_Results",
+  "title": "OSINT Implementation Guidelines",
+  "source": "https://incyber.org/en/article/osint-put-to-the-test-of-ai-exploring-measuring-verifying/",
+  "generated": "2026-09-30T15:17:39.312703+00:00",
+  "content_preview": "## OSINT Best Practices for AI Projects\n\n### Metrics to Track\nPer OSINT-AI benchmark (INCYBER 2024):\n- **NER Precision/Recall**: Entity extraction accuracy on project metadata\n- **Metadata Completenes..."
+}

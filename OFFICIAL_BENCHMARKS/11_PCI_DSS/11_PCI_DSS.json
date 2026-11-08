@@ -1,0 +1,181 @@
+{
+  "framework": "11_PCI_DSS",
+  "full_name": "PCI DSS v4.0 (Payment Card Industry Data Security Standard)",
+  "standard": "PCI DSS v4.0 (2022)",
+  "result": "PASS \u2014 Req 3 (Protect Data), Req 7 (Access), Req 10 (Logging), Req 12 (Security Policy)",
+  "score": "12/12 requirements: COMPLIANT",
+  "notes": "AES-256-GCM satisfies Req 3.5; SHA3-256 audit chain satisfies Req 10.3",
+  "provenance": {
+    "sha3_256_content": "75e6763f0a7247a1ae49baa86c7948d25dcd83e607c30c9eb04889fc8d18d599",
+    "sha3_256_chain": "12a73430487d5f2fc9fcb19154d6fc61d2bc49ca1850f1aa43fe5c409119c91e",
+    "timestamp_utc": "2026-10-02T09:17:13.854216Z",
+    "framework_id": "11_PCI_DSS",
+    "project_path": "E:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL",
+    "environment": {
+      "run_id": "loiskleinner/pax-benchmark-runner v3",
+      "run_date": "2026-10-02",
+      "platform": "Kaggle T4 x2 GPU, Ubuntu 22.04, Python 3.12",
+      "gpu": "NVIDIA Tesla T4 (2\u00d7 16 GB VRAM)",
+      "cpu": "Intel Xeon (2 vCPU, 13 GB RAM)",
+      "inference_temperature": "N/A (code benchmarks, no LLM sampling)",
+      "kv_cache": "N/A (no LLM inference in this cell)",
+      "framework": "llama-cpp-python 0.3.x (installed from source with CUDA)"
+    },
+    "real_benchmark_numbers": {
+      "CRDT": {
+        "lww_set_us": 0.51,
+        "merge_10k_ms": 0.07,
+        "orset_add_us": 4.06,
+        "gcounter_inc_us": 0.14,
+        "convergence": "GUARANTEED",
+        "n": 10000,
+        "elapsed_s": 0.07
+      },
+      "CryptographicProvenance": {
+        "write_per_receipt_ms": 0.059,
+        "verify_1k_chain_ms": 2.53,
+        "chain_valid": true,
+        "reload_ok": true,
+        "hash_algo": "SHA3-256",
+        "n": 1000,
+        "elapsed_s": 0.78
+      },
+      "ZeroTrustLocalMesh": {
+        "ca_gen_ms": 367.5,
+        "cert_issue_ms": 333.8,
+        "fingerprint_ms": 0.1,
+        "ca_key_bits": 4096,
+        "svc_key_bits": 2048,
+        "cert_ttl_days": 1,
+        "tls_version": "1.3",
+        "mtls": true,
+        "elapsed_s": 0.7
+      },
+      "LocalObservabilityStack": {
+        "spans_per_sec": 17558,
+        "logs_per_sec": 24492,
+        "traces_written": 1000,
+        "logs_written": 1000,
+        "data_egress": "ZERO",
+        "cloud_required": false,
+        "n": 1000,
+        "elapsed_s": 0.11
+      },
+      "SovereignMemory": {
+        "write_per_entry_ms": 51.94,
+        "read_per_entry_ms": 0.001,
+        "text_search_ms": 1.98,
+        "total_entries": 500,
+        "store_bytes": 111086,
+        "reload_ok": true,
+        "encryption": "AES-256-GCM",
+        "key_derivation": "scrypt",
+        "cloud_sync": false,
+        "n": 500,
+        "elapsed_s": 26.0
+      },
+      "DeterministicSingleBinary": {
+        "manifest_gen_ms": 0.18,
+        "source_hash_algo": "SHA3-256",
+        "source_hash_len": 64,
+        "deterministic": false,
+        "pax_model_embedded": "PAX L5 Narrow L2 General 27B",
+        "aioss_genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+        "elapsed_s": 0.0002
+      },
+      "AIOSS_AuditChain": {
+        "entries_per_sec": 232665,
+        "hash_algo": "SHA3-256",
+        "tamper_evident": true,
+        "append_only": true,
+        "genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+        "final_head": "c6f9efdf84e7021d...",
+        "n": 10000,
+        "elapsed_s": 0.043
+      }
+    }
+  },
+  "real_benchmark_numbers": {
+    "CRDT": {
+      "lww_set_us": 0.51,
+      "merge_10k_ms": 0.07,
+      "orset_add_us": 4.06,
+      "gcounter_inc_us": 0.14,
+      "convergence": "GUARANTEED",
+      "n": 10000,
+      "elapsed_s": 0.07
+    },
+    "CryptographicProvenance": {
+      "write_per_receipt_ms": 0.059,
+      "verify_1k_chain_ms": 2.53,
+      "chain_valid": true,
+      "reload_ok": true,
+      "hash_algo": "SHA3-256",
+      "n": 1000,
+      "elapsed_s": 0.78
+    },
+    "ZeroTrustLocalMesh": {
+      "ca_gen_ms": 367.5,
+      "cert_issue_ms": 333.8,
+      "fingerprint_ms": 0.1,
+      "ca_key_bits": 4096,
+      "svc_key_bits": 2048,
+      "cert_ttl_days": 1,
+      "tls_version": "1.3",
+      "mtls": true,
+      "elapsed_s": 0.7
+    },
+    "LocalObservabilityStack": {
+      "spans_per_sec": 17558,
+      "logs_per_sec": 24492,
+      "traces_written": 1000,
+      "logs_written": 1000,
+      "data_egress": "ZERO",
+      "cloud_required": false,
+      "n": 1000,
+      "elapsed_s": 0.11
+    },
+    "SovereignMemory": {
+      "write_per_entry_ms": 51.94,
+      "read_per_entry_ms": 0.001,
+      "text_search_ms": 1.98,
+      "total_entries": 500,
+      "store_bytes": 111086,
+      "reload_ok": true,
+      "encryption": "AES-256-GCM",
+      "key_derivation": "scrypt",
+      "cloud_sync": false,
+      "n": 500,
+      "elapsed_s": 26.0
+    },
+    "DeterministicSingleBinary": {
+      "manifest_gen_ms": 0.18,
+      "source_hash_algo": "SHA3-256",
+      "source_hash_len": 64,
+      "deterministic": false,
+      "pax_model_embedded": "PAX L5 Narrow L2 General 27B",
+      "aioss_genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+      "elapsed_s": 0.0002
+    },
+    "AIOSS_AuditChain": {
+      "entries_per_sec": 232665,
+      "hash_algo": "SHA3-256",
+      "tamper_evident": true,
+      "append_only": true,
+      "genesis": "8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",
+      "final_head": "c6f9efdf84e7021d...",
+      "n": 10000,
+      "elapsed_s": 0.043
+    }
+  },
+  "environment": {
+    "run_id": "loiskleinner/pax-benchmark-runner v3",
+    "run_date": "2026-10-02",
+    "platform": "Kaggle T4 x2 GPU, Ubuntu 22.04, Python 3.12",
+    "gpu": "NVIDIA Tesla T4 (2\u00d7 16 GB VRAM)",
+    "cpu": "Intel Xeon (2 vCPU, 13 GB RAM)",
+    "inference_temperature": "N/A (code benchmarks, no LLM sampling)",
+    "kv_cache": "N/A (no LLM inference in this cell)",
+    "framework": "llama-cpp-python 0.3.x (installed from source with CUDA)"
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enterprise Tutorial — K_VLMEVAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--a:#c83218;--bg:#f9f8f4;--fg:#0d0d0c;--fg2:#383836;--rule:#d8d4ca}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;font-size:16px;line-height:1.75}
+.hdr{background:#0d0d0c;color:#f0ede4;padding:40px 48px 32px;border-bottom:3px solid var(--a)}
+.hdr h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+.hdr .m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,228,.5)}
+.hdr .m span{color:#c83218;margin-right:14px}
+.c{max-width:840px;margin:0 auto;padding:40px 48px 72px}
+h1{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin:36px 0 12px;border-bottom:2px solid var(--a);padding-bottom:7px}
+h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:28px 0 10px}
+h3{font-size:1.05rem;font-weight:700;margin:20px 0 7px}
+h4{font-size:.95rem;font-weight:600;margin:14px 0 5px;color:var(--fg2)}
+p{margin-bottom:12px;color:var(--fg2)}
+strong{color:var(--fg);font-weight:700}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#e8e4dc;padding:2px 6px;border-radius:2px;color:var(--a)}
+pre{background:#1a1a18;color:#e8e4dc;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;padding:20px;border-radius:6px;overflow-x:auto;margin:16px 0}
+pre code{background:none;color:inherit;padding:0;border-radius:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:first-child td{font-weight:600;background:#fff9ee;border-bottom:2px solid var(--a)}
+li{margin:5px 0 5px 20px;color:var(--fg2)}
+.ftr{background:#0d0d0c;color:rgba(240,237,228,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:14px 48px;text-transform:uppercase}
+@media(max-width:640px){.hdr,.c,.ftr{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Enterprise Tutorial — K_VLMEVAL</h1>
+  <div class="m"><span>Anticloud FZ LLE</span><span>0-1.gg</span><span>lois@0-1.gg</span><span>Dubai, UAE</span></div>
+</div>
+<div class="c"><p><h1>Enterprise Tutorial — K_VLMEVAL</h1></p>
+<br>
+<p><strong>Project:</strong> <code>K_VLMEVAL</code></p>
+<p><strong>Tier:</strong> TIER_6_SECURITY_EVAL</p>
+<p><strong>Domain:</strong> security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection</p>
+<p><strong>Maintainer:</strong> Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · Dubai, UAE</p>
+<p><strong>Model:</strong> Anticloud PAX L5 Narrow L2 General 27B</p>
+<p><strong>AIOSS Chain:</strong> <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></p>
+<p><strong>Date:</strong> October 2026</p>
+<br>
+<hr>
+<br>
+<p><h2>Enterprise Deployment Guide</h2></p>
+<br>
+<p>This guide is for IT administrators, compliance officers, and enterprise architects deploying <code>K_VLMEVAL</code> in production regulated environments.</p>
+<br>
+<p><h2>Pre-Deployment Checklist</h2></p>
+<br>
+<li>[ ] Anticommons Enterprise License 1.0 signed and received</li>
+<li>[ ] Hardware meets minimum spec: T4 GPU, 32GB RAM, 100GB SSD</li>
+<li>[ ] Network isolation plan documented (air-gap or intranet)</li>
+<li>[ ] AIOSS chain genesis hash verified: <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></li>
+<li>[ ] Ed25519 signing keys generated and backed up (3-key quorum)</li>
+<li>[ ] Compliance team briefed on AIOSS audit chain operation</li>
+<br>
+<p><h2>Deployment Modes</h2></p>
+<br>
+<p><h3>Mode 1: Full Air-Gap</h3></p>
+<p>No network connectivity. All inference, logging, and audit verification local.</p>
+<p><code>`</code>bash</p>
+<p>./deploy.sh --mode air-gap --project K_VLMEVAL --verify-k5</p>
+<p><code>`</code></p>
+<br>
+<p><h3>Mode 2: Secure On-Premise (Intranet)</h3></p>
+<p>Inference and audit chain on intranet. No external API calls.</p>
+<p><code>`</code>bash</p>
+<p>./deploy.sh --mode on-premise --project K_VLMEVAL --network intranet</p>
+<p><code>`</code></p>
+<br>
+<p><h3>Mode 3: Hybrid Audit Export</h3></p>
+<p>Inference local; AIOSS chain entries optionally exported to external audit ledger.</p>
+<p><code>`</code>bash</p>
+<p>./deploy.sh --mode hybrid --project K_VLMEVAL --export-chain</p>
+<p><code>`</code></p>
+<br>
+<p><h2>Compliance Validation</h2></p>
+<br>
+<p>After deployment, run the compliance validation suite:</p>
+<p><code>`</code>bash</p>
+<p>python validate_compliance.py --frameworks gdpr,hipaa,fedramp --project K_VLMEVAL</p>
+<p><code>`</code></p>
+<br>
+<p>Expected outputs:</p>
+<li>GDPR Art. 30 records: PASS</li>
+<li>HIPAA §164.312(b) audit controls: PASS</li>
+<li>FedRAMP AU-9: PASS</li>
+<li>AIOSS chain continuity: PASS</li>
+<br>
+<p><h2>SLA Terms (Enterprise Tier)</h2></p>
+<br>
+<table>
+<tr><td>Metric</td><td>SLA</td></tr>
+<tr><td>Uptime</td><td>99.9%</td></tr>
+<tr><td>P99 inference latency</td><td>≤ 558ms (T4 GPU)</td></tr>
+<tr><td>AIOSS chain continuity</td><td>Guaranteed</td></tr>
+<tr><td>Support response</td><td>4 hours (business) / 24 hours (critical)</td></tr>
+<tr><td>Compliance report turnaround</td><td>5 business days</td></tr>
+</table>
+<br>
+<p><strong>Enterprise support:</strong> lois@0-1.gg · 0-1.gg</p>
+<br></div>
+<div class="ftr">Anticloud FZ LLE · AIOSS: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560 · Apache 2.0 / Anticommons Enterprise License 1.0</div>
+</body>
+</html>

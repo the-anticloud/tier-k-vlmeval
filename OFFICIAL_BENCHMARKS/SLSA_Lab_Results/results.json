@@ -1,0 +1,51 @@
+{
+  "benchmark": "SLSA_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_load_time_sec": 2.96,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "SLSA v1.1 \u2014 Supply Chain Levels for Software Artifacts",
+    "source": "https://openssf.org/projects/slsa/",
+    "achieved_level": 3,
+    "max_level": 3,
+    "checks": [
+      {
+        "check": "L1_provenance_exists",
+        "pass": true
+      },
+      {
+        "check": "L1_build_process_documented",
+        "pass": true
+      },
+      {
+        "check": "L2_hosted_build",
+        "pass": true
+      },
+      {
+        "check": "L2_signed_provenance",
+        "pass": true
+      },
+      {
+        "check": "L3_build_isolation",
+        "pass": true
+      },
+      {
+        "check": "L3_reproducible_build",
+        "pass": true
+      }
+    ],
+    "l1_pass": true,
+    "l2_pass": true,
+    "l3_pass": true,
+    "status": "PASS"
+  }
+}

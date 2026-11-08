@@ -1,0 +1,55 @@
+{
+  "benchmark": "OWASP_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:07:07.146295+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_model_load_time_sec": 4.42,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "OWASP LLM Top 10 v1.1 (2024)",
+    "source": "https://genai.owasp.org/resource/llm-top-10-for-llms-v1-1/",
+    "checks": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "status": "PASS",
+        "note": "grep for input sanitization patterns"
+      },
+      {
+        "id": "LLM02",
+        "name": "Insecure Output Handling",
+        "status": "UNVERIFIED",
+        "note": "grep for output escaping/sanitization"
+      },
+      {
+        "id": "LLM06",
+        "name": "Sensitive Information Disclosure",
+        "status": "PASS",
+        "note": "grep for env-var based secret management"
+      },
+      {
+        "id": "LLM09",
+        "name": "Overreliance",
+        "status": "PASS",
+        "note": "grep for confidence thresholds or human review gates"
+      },
+      {
+        "id": "LLM10",
+        "name": "Model Theft",
+        "status": "PASS",
+        "note": "grep for rate limiting or endpoint auth"
+      }
+    ],
+    "passed": 4,
+    "unverified": 1,
+    "total": 5,
+    "pass_rate": 0.8
+  }
+}

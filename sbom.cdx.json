@@ -1,0 +1,60 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:ecb343b6-bcc8-5fab-b780-7f8c380e7e90",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:10:02Z",
+    "component": {
+      "type": "application",
+      "name": "K_VLMEVAL",
+      "version": "unknown",
+      "bom-ref": "pkg:generic/anticloud/K_VLMEVAL@unknown",
+      "purl": "pkg:generic/anticloud/K_VLMEVAL@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": ""
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": ""
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "-r",
+      "version": "unspecified",
+      "purl": "pkg:pypi/-r",
+      "bom-ref": "pypi/-r@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "-e",
+      "version": "unspecified",
+      "purl": "pkg:pypi/-e",
+      "bom-ref": "pypi/-e@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "vlmutil",
+      "version": "= vlmeval:cli",
+      "purl": "pkg:pypi/vlmutil@vlmeval:cli",
+      "bom-ref": "pypi/vlmutil@= vlmeval:cli"
+    }
+  ]
+}

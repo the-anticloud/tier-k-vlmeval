@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integrations and SDK — K_VLMEVAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--a:#c83218;--bg:#f9f8f4;--fg:#0d0d0c;--fg2:#383836;--rule:#d8d4ca}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;font-size:16px;line-height:1.75}
+.hdr{background:#0d0d0c;color:#f0ede4;padding:40px 48px 32px;border-bottom:3px solid var(--a)}
+.hdr h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+.hdr .m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,228,.5)}
+.hdr .m span{color:#c83218;margin-right:14px}
+.c{max-width:840px;margin:0 auto;padding:40px 48px 72px}
+h1{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin:36px 0 12px;border-bottom:2px solid var(--a);padding-bottom:7px}
+h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:28px 0 10px}
+h3{font-size:1.05rem;font-weight:700;margin:20px 0 7px}
+h4{font-size:.95rem;font-weight:600;margin:14px 0 5px;color:var(--fg2)}
+p{margin-bottom:12px;color:var(--fg2)}
+strong{color:var(--fg);font-weight:700}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#e8e4dc;padding:2px 6px;border-radius:2px;color:var(--a)}
+pre{background:#1a1a18;color:#e8e4dc;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;padding:20px;border-radius:6px;overflow-x:auto;margin:16px 0}
+pre code{background:none;color:inherit;padding:0;border-radius:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:first-child td{font-weight:600;background:#fff9ee;border-bottom:2px solid var(--a)}
+li{margin:5px 0 5px 20px;color:var(--fg2)}
+.ftr{background:#0d0d0c;color:rgba(240,237,228,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:14px 48px;text-transform:uppercase}
+@media(max-width:640px){.hdr,.c,.ftr{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Integrations and SDK — K_VLMEVAL</h1>
+  <div class="m"><span>Anticloud FZ LLE</span><span>0-1.gg</span><span>lois@0-1.gg</span><span>Dubai, UAE</span></div>
+</div>
+<div class="c"><p><h1>Integrations and SDK — K_VLMEVAL</h1></p>
+<br>
+<p><strong>Project:</strong> <code>K_VLMEVAL</code></p>
+<p><strong>Tier:</strong> TIER_6_SECURITY_EVAL</p>
+<p><strong>Domain:</strong> security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection</p>
+<p><strong>Maintainer:</strong> Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · Dubai, UAE</p>
+<p><strong>Model:</strong> Anticloud PAX L5 Narrow L2 General 27B</p>
+<p><strong>AIOSS Chain:</strong> <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></p>
+<p><strong>Date:</strong> October 2026</p>
+<br>
+<hr>
+<br>
+<p><h2>SDK Overview</h2></p>
+<br>
+<p><code>K_VLMEVAL</code> ships with a Python SDK and integration packages for common platforms.</p>
+<br>
+<p><h2>Python SDK</h2></p>
+<br>
+<p><code>`</code>bash</p>
+<p>pip install anticloud-k-vlmeval</p>
+<p><code>`</code></p>
+<br>
+<p><h3>Core SDK Usage</h3></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.k_vlmeval import KVlmevalClient</p>
+<br>
+<p>client = KVlmevalClient(</p>
+<p>    api_key="your-license-key",</p>
+<p>    chain_genesis="8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",</p>
+<p>    compliance_mode="hipaa",  # or gdpr, fedramp, pci-dss</p>
+<p>)</p>
+<br>
+<p>result = client.run(prompt="Your query here")</p>
+<p>print(result.text)</p>
+<p>print(f"Chain entry: {result.aioss_hash}")</p>
+<p><code>`</code></p>
+<br>
+<p><h2>REST API</h2></p>
+<br>
+<p><code>`</code></p>
+<p>POST /v1/infer</p>
+<p>Authorization: Bearer <license-key></p>
+<p>Content-Type: application/json</p>
+<br>
+<p>{</p>
+<p>  "prompt": "Your query",</p>
+<p>  "max_tokens": 512,</p>
+<p>  "compliance_mode": "gdpr",</p>
+<p>  "project": "K_VLMEVAL"</p>
+<p>}</p>
+<p><code>`</code></p>
+<br>
+<p><strong>Response:</strong></p>
+<p><code>`</code>json</p>
+<p>{</p>
+<p>  "text": "...",</p>
+<p>  "aioss_entry_hash": "sha3-256-hash",</p>
+<p>  "latency_ms": 508,</p>
+<p>  "tokens_used": 312,</p>
+<p>  "compliance_checks": {"gdpr": "PASS", "pii_detected": false}</p>
+<p>}</p>
+<p><code>`</code></p>
+<br>
+<p><h2>Platform Integrations</h2></p>
+<br>
+<table>
+<tr><td>Platform</td><td>Integration</td><td>Status</td></tr>
+<tr><td>GitHub Actions</td><td><code>.github/workflows/anticloud-ci.yml</code></td><td>Available</td></tr>
+<tr><td>Slack</td><td>api-oss-integrations-slack</td><td>Available</td></tr>
+<tr><td>Zapier</td><td>api-oss-integrations-zapier</td><td>Available</td></tr>
+<tr><td>Kubernetes</td><td><code>kubernetes-manifests/</code></td><td>Available</td></tr>
+<tr><td>Terraform (AWS)</td><td><code>terraform-aws/</code></td><td>Available</td></tr>
+<tr><td>Docker Compose</td><td><code>docker-compose/</code></td><td>Available</td></tr>
+</table>
+<br>
+<p><h2>WebHook Integration</h2></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.webhooks import AIAOSSWebhook</p>
+<br>
+<p>hook = AIAOSSWebhook(</p>
+<p>    endpoint="https://your-system.example.com/aioss",</p>
+<p>    secret="your-webhook-secret",</p>
+<p>    events=["inference.complete", "chain.update", "compliance.alert"],</p>
+<p>)</p>
+<p>hook.register()</p>
+<p><code>`</code></p>
+<br>
+<p><h2>SDK Reference Documentation</h2></p>
+<br>
+<p>Full SDK reference is auto-generated from type stubs and published at 0-1.gg/docs/k-vlmeval.</p>
+<br>
+<p><strong>Support:</strong> lois@0-1.gg · 0-1.gg</p>
+<br></div>
+<div class="ftr">Anticloud FZ LLE · AIOSS: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560 · Apache 2.0 / Anticommons Enterprise License 1.0</div>
+</body>
+</html>

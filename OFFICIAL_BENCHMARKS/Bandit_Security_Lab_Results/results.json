@@ -1,0 +1,19 @@
+{
+  "benchmark": "Bandit_Security_Lab_Results",
+  "project": "K_VLMEVAL",
+  "run_timestamp": "2026-09-30T17:14:20.030944+00:00",
+  "source": "https://bandit.readthedocs.io/",
+  "results": {
+    "framework": "Bandit SAST Security Scanner",
+    "source": "https://bandit.readthedocs.io/",
+    "files_scanned": 10,
+    "issues_high": 2,
+    "issues_medium": 7,
+    "issues_low": 20,
+    "total_issues": 29,
+    "loc_scanned": 2481,
+    "nosec_skipped": 0,
+    "status": "PARTIAL",
+    "raw_output": ""
+  }
+}

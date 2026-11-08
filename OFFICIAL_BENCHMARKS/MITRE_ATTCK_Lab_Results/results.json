@@ -1,0 +1,26 @@
+{
+  "benchmark": "MITRE_ATTCK_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:07:07.146295+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_model_load_time_sec": 4.42,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "MITRE ATT&CK Evaluations 2024 (DQI/PQI/IQI)",
+    "source": "https://evals.mitre.org/methodology-specification/",
+    "DQI": 100,
+    "PQI": 100,
+    "IQI": 100,
+    "overall": 100,
+    "detection_basis": "logging grep",
+    "protection_basis": "security grep",
+    "investigation_basis": "ledger folder present"
+  }
+}

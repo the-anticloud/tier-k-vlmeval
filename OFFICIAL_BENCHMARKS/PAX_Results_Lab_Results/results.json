@@ -1,0 +1,51 @@
+{
+  "benchmark": "PAX_Results_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_load_time_sec": 2.96,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "Anticloud PAX (Patch/Apply/Xvalidate) Ledger Protocol",
+    "source": "Internal \u2014 anticloud-edits.json + LEDGERS/ chain",
+    "checks": [
+      {
+        "check": "upstream_exists",
+        "pass": true,
+        "desc": "UPSTREAM/ directory present"
+      },
+      {
+        "check": "git_index_exists",
+        "pass": true,
+        "desc": ".git/index present (not corrupted)"
+      },
+      {
+        "check": "ledger_dir_exists",
+        "pass": true,
+        "desc": "LEDGERS/ directory present"
+      },
+      {
+        "check": "anticloud_edits_exists",
+        "pass": true,
+        "desc": "anticloud-edits.json present"
+      },
+      {
+        "check": "edits_not_empty",
+        "pass": true,
+        "desc": "anticloud-edits.json non-empty"
+      }
+    ],
+    "passed": 5,
+    "total": 5,
+    "pax_score": 1.0,
+    "edits_count": 1,
+    "status": "PASS"
+  }
+}

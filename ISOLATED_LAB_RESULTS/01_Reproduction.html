@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>01 Reproduction</title>
+<style>body{font-family:Arial;max-width:900px;margin:40px auto;padding:0 20px;}
+h1{color:#1a1a2e;}h2{color:#16213e;}
+.hdr{background:#1a1a2e;color:#fff;padding:20px;border-radius:8px;margin-bottom:24px;}
+table{border-collapse:collapse;width:100%;}td,th{border:1px solid #ddd;padding:8px;}
+th{background:#1a1a2e;color:#fff;}</style></head><body>
+<div class="hdr"><h1>01 Reproduction</h1><p>K_VLMEVAL | Anticloud FZ LLE | PAX L5 Narrow L2 General 27B</p></div>
+<pre style="white-space:pre-wrap;font-family:inherit"># Isolated Lab Results
+
+**Project:** `K_VLMEVAL`  
+**Tier:** TIER_6_SECURITY_EVAL  
+**Identity:** Upstream `open-compass/VLMEvalKit` @ `54a063c5bf75` (Apache-2.0)
+
+## Why isolation is recorded separately
+
+Results produced locally are not the same claim as results produced after
+a public launch. Local runs can be shaped by the operator; public runs
+cannot. Conflating them would let a controlled experiment masquerade as a
+field result, which is the specific failure the II budget exists to
+prevent. This folder holds only the isolated, pre-launch condition.
+
+## Reproduction contract
+
+A result is admissible here only if all of the following are recorded:
+
+1. The exact commit of this project and of its upstream.
+2. The environment (interpreter, platform, installed extras).
+3. The command, verbatim.
+4. The pass condition, stated before the run.
+5. The observed output, unedited.
+
+## Current state
+
+Project `K_VLMEVAL` has no executed lab result recorded at the time of
+generation. The register below is the template the first run must fill
+in; it is not a result.
+
+| Result | Pass condition | Command | Observed | Status |
+| --- | --- | --- | --- | --- |
+| (none yet) | (define before running) | (verbatim) | (unrecorded) | NOT RUN |
+
+## After public launch
+
+Kaggle and Hugging Face deployment results belong in a separate record,
+never here, and must state the model weights, dataset revision, and
+inference configuration used. Expect these to differ from the isolated
+figures; where they do, the difference is the finding.
+</pre></body></html>

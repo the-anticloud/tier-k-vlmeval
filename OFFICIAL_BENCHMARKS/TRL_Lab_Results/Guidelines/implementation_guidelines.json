@@ -1,0 +1,7 @@
+{
+  "benchmark": "TRL_Lab_Results",
+  "title": "TRL Best Practices & Guidelines",
+  "source": "https://www.nature.com/articles/s41467-022-33128-9",
+  "generated": "2026-09-30T15:17:39.312703+00:00",
+  "content_preview": "## TRL Best Practices for AI/ML Systems\n\n### What TRL Measures\nTechnology Readiness Level (TRL) for ML (Lavin et al. 2022, Nature Communications) uses a 1\u20139 scale:\n- TRL 1\u20133: Research (concept, feasib..."
+}

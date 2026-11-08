@@ -1,0 +1,60 @@
+{
+  "benchmark": "TRL_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:07:07.146295+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_model_load_time_sec": 4.42,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "ML-TRL (Lavin et al. 2022 - Nature Communications)",
+    "source": "https://www.nature.com/articles/s41467-022-33128-9",
+    "measured_trl": 8,
+    "target_trl": 8,
+    "meets_target": true,
+    "ratio": 1.0,
+    "factors": [
+      {
+        "factor": "has_upstream",
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "factor": "tracked_files_100+",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "factor": "has_tests",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "factor": "has_ci_cd",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "factor": "has_official_docs",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "factor": "open_licence",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "factor": "source_lines_1000+",
+        "pass": true,
+        "weight": 1
+      }
+    ]
+  }
+}

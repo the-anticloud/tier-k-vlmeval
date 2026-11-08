@@ -1,0 +1,19 @@
+{
+  "benchmark": "Dependency_Audit_Lab_Results",
+  "project": "K_VLMEVAL",
+  "run_timestamp": "2026-09-30T17:14:20.030944+00:00",
+  "source": "https://pypi.org/project/pip-audit/",
+  "results": {
+    "framework": "Dependency Audit (SBOM + pip-audit proxy)",
+    "source": "https://pypi.org/project/pip-audit/",
+    "dependency_files_found": [
+      "requirements.txt",
+      "setup.py"
+    ],
+    "requirements_count": 71,
+    "has_pinned_deps": true,
+    "dep_file_count": 2,
+    "note": "Full pip-audit CVE scan requires network. This is a presence/structure check.",
+    "status": "PASS"
+  }
+}

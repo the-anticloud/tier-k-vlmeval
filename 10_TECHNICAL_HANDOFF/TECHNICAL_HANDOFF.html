@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technical Handoff — K_VLMEVAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--a:#c83218;--bg:#f9f8f4;--fg:#0d0d0c;--fg2:#383836;--rule:#d8d4ca}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;font-size:16px;line-height:1.75}
+.hdr{background:#0d0d0c;color:#f0ede4;padding:40px 48px 32px;border-bottom:3px solid var(--a)}
+.hdr h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+.hdr .m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,228,.5)}
+.hdr .m span{color:#c83218;margin-right:14px}
+.c{max-width:840px;margin:0 auto;padding:40px 48px 72px}
+h1{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin:36px 0 12px;border-bottom:2px solid var(--a);padding-bottom:7px}
+h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:28px 0 10px}
+h3{font-size:1.05rem;font-weight:700;margin:20px 0 7px}
+h4{font-size:.95rem;font-weight:600;margin:14px 0 5px;color:var(--fg2)}
+p{margin-bottom:12px;color:var(--fg2)}
+strong{color:var(--fg);font-weight:700}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#e8e4dc;padding:2px 6px;border-radius:2px;color:var(--a)}
+pre{background:#1a1a18;color:#e8e4dc;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;padding:20px;border-radius:6px;overflow-x:auto;margin:16px 0}
+pre code{background:none;color:inherit;padding:0;border-radius:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:first-child td{font-weight:600;background:#fff9ee;border-bottom:2px solid var(--a)}
+li{margin:5px 0 5px 20px;color:var(--fg2)}
+.ftr{background:#0d0d0c;color:rgba(240,237,228,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:14px 48px;text-transform:uppercase}
+@media(max-width:640px){.hdr,.c,.ftr{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Technical Handoff — K_VLMEVAL</h1>
+  <div class="m"><span>Anticloud FZ LLE</span><span>0-1.gg</span><span>lois@0-1.gg</span><span>Dubai, UAE</span></div>
+</div>
+<div class="c"><p><h1>Technical Handoff — K_VLMEVAL</h1></p>
+<br>
+<p><strong>Project:</strong> <code>K_VLMEVAL</code></p>
+<p><strong>Tier:</strong> TIER_6_SECURITY_EVAL</p>
+<p><strong>Domain:</strong> security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection</p>
+<p><strong>Maintainer:</strong> Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · Dubai, UAE</p>
+<p><strong>Model:</strong> Anticloud PAX L5 Narrow L2 General 27B</p>
+<p><strong>AIOSS Chain:</strong> <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></p>
+<p><strong>Date:</strong> October 2026</p>
+<br>
+<hr>
+<br>
+<p><h2>Handoff Overview</h2></p>
+<br>
+<p>This document provides the complete technical handoff package for <code>K_VLMEVAL</code> — everything a new engineer, integration partner, or enterprise customer needs to take ownership of this component.</p>
+<br>
+<p><h2>System Context</h2></p>
+<br>
+<p><code>K_VLMEVAL</code> is a security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection component within the Anticloud 9-tier sovereign AI infrastructure. It integrates with the PAX L5 Narrow L2 General 27B inference engine via the AIOSS audit chain.</p>
+<br>
+<p><h2>Deployment Package Contents</h2></p>
+<br>
+<p>Each <code>K_VLMEVAL</code> deployment package includes:</p>
+<br>
+<p><code>`</code></p>
+<p>K_VLMEVAL/</p>
+<p>├── *.tar.gz          # Main archive (SHA3-256 verified)</p>
+<p>├── *.zip             # Zip archive (SHA3-256 verified)</p>
+<p>├── *.7z              # 7-zip archive (SHA3-256 verified)</p>
+<p>├── HASHES.md         # KANTOR K5 post-quantum hashes</p>
+<p>├── AIOSS chain hash  # 8b4a8a4f6312dfbe885de82807169856...</p>
+<p>├── 00_README.md      # Entry point</p>
+<p>└── [document subfolders 01-28]</p>
+<p><code>`</code></p>
+<br>
+<p><h2>Environment Requirements</h2></p>
+<br>
+<table>
+<tr><td>Requirement</td><td>Minimum</td><td>Recommended</td></tr>
+<tr><td>GPU</td><td>NVIDIA T4 (15.64GB VRAM)</td><td>A100 80GB</td></tr>
+<tr><td>CPU</td><td>8-core x86_64</td><td>32-core</td></tr>
+<tr><td>RAM</td><td>32GB</td><td>128GB</td></tr>
+<tr><td>Storage</td><td>100GB SSD</td><td>1TB NVMe</td></tr>
+<tr><td>OS</td><td>Ubuntu 22.04 LTS</td><td>Ubuntu 22.04 LTS</td></tr>
+<tr><td>CUDA</td><td>12.0+</td><td>12.8</td></tr>
+<tr><td>Python</td><td>3.10+</td><td>3.11</td></tr>
+</table>
+<br>
+<p><h2>Verification Steps</h2></p>
+<br>
+<p>1. Verify KANTOR K5 hash against HASHES.md before deployment</p>
+<p>2. Confirm AIOSS chain starts from genesis block or a valid parent hash</p>
+<p>3. Run offline verification kit: <code>python verify.py --chain 8b4a8a4f6312dfbe...</code></p>
+<p>4. Confirm TLS 1.3 is active on all inbound endpoints</p>
+<p>5. Validate Ed25519 signing key fingerprint with Anticloud FZ LLE: lois@0-1.gg</p>
+<br>
+<p><h2>Key Contacts</h2></p>
+<br>
+<table>
+<tr><td>Role</td><td>Contact</td></tr>
+<tr><td>Technical lead</td><td>lois@0-1.gg</td></tr>
+<tr><td>Compliance handoff</td><td>lois@0-1.gg</td></tr>
+<tr><td>Emergency</td><td>lois@0-1.gg</td></tr>
+</table>
+<br>
+<p><strong>0-1.gg · Anticloud FZ LLE · Dubai, UAE</strong></p>
+<br></div>
+<div class="ftr">Anticloud FZ LLE · AIOSS: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560 · Apache 2.0 / Anticommons Enterprise License 1.0</div>
+</body>
+</html>

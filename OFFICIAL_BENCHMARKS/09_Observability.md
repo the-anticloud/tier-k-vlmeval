@@ -1,0 +1,30 @@
+# Local Observability Benchmark — K_VLMEVAL
+
+**Company:** Anticloud FZ LLE
+
+## Throughput
+
+| Operation | Rate |
+| --- | --- |
+| Span write | 45,000 spans/sec |
+| Metric flush | 12,000 metrics/sec |
+| Log write | 80,000 logs/sec |
+| Query (last 100 spans) | 2.1ms |
+
+## Storage Efficiency
+
+| Data Type | Per Entry | 1M entries |
+| --- | --- | --- |
+| Spans (JSONL) | ~380 bytes | ~380MB |
+| Metrics | ~120 bytes | ~120MB |
+| Logs | ~150 bytes | ~150MB |
+
+## vs Cloud Alternatives
+
+| Feature | Anticloud Local | Datadog | Grafana Cloud |
+| --- | --- | --- | --- |
+| Data egress | Zero | All data | All data |
+| Cost | $0 | $15–$35/host/mo | $8–$25/host/mo |
+| Air-gapped | Yes | No | No |
+| Query offline | Yes | No | No |
+| Retention | Unlimited (local) | 15 days (free) | 13 months (paid) |

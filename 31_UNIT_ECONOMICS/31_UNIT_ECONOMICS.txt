@@ -1,0 +1,98 @@
+Unit Economics — K Vlmeval
+*Anticloud FZ LLE · 0-1.gg · lois@0-1.gg*
+*Date:* October 2026
+
+---
+
+Headline Metrics
+
+| Metric | Value | Notes |
+|---|---|---|
+| Cost per 1M tokens (infrastructure) | *$0.08* | T4 GPU @ $0.40/hr, 5M tok/hr throughput |
+| Cost per 1M tokens (GPT-4) | $60.00 | OpenAI published pricing |
+| *Cost advantage | 750x cheaper* | Same or better benchmark performance |
+| Gross margin (Enterprise license) | *94%* | $185K ARR / ~$11K infra cost |
+| LTV (Enterprise, 3yr) | $555,000 | $185K x 3yr avg retention |
+| CAC (Enterprise) | $24,000 | 3 mo SDR + 1 mo AE at blended cost |
+| *LTV/CAC | 23x* | Best-in-class for infrastructure SaaS |
+| Payback period | *1.6 months* | $185K ARR = $15.4K/mo |
+
+---
+
+Revenue Per Tier
+
+| Tier | ACV | Infra Cost/yr | Gross Margin | CAC | LTV (3yr) | LTV/CAC |
+|---|---|---|---|---|---|---|
+| Startup | $18,000 | $960 | 94.7% | $4,000 | $54,000 | 13.5x |
+| Growth | $85,000 | $4,800 | 94.4% | $12,000 | $255,000 | 21x |
+| Enterprise | $185,000 | $11,000 | 94.1% | $24,000 | $555,000 | 23x |
+| Government | $850,000 | $48,000 | 94.4% | $80,000 | $2,550,000 | 32x |
+| Strategic/OEM | $5,000,000 | $250,000 | 95.0% | $200,000 | $15,000,000 | 75x |
+
+---
+
+Infrastructure Cost Model
+
+*Hardware:* NVIDIA T4 16GB GPU
+*On-demand price:* $0.40/hr (AWS g4dn, GCP T4, Lambda Cloud)
+*Throughput:* PAX L5 Narrow L2 General 27B at ~5M tokens/hr on T4 (Q4 quantized, batch 8)
+*Cost per 1M tokens: $0.40 / 5 = $0.08*
+
+*At scale (dedicated GPU, reserved):*
+- Reserved T4 instance: ~$0.18/hr
+- Throughput: 5M tok/hr
+- Cost per 1M tokens: *$0.036* (55% cheaper than on-demand)
+
+---
+
+Magic Number (Sales Efficiency)
+
+| Period | New ARR | S&M Spend | Magic Number |
+|---|---|---|---|
+| Q1 2027 (est.) | $185K | $45K | 1.64 |
+| Q2 2027 (est.) | $370K | $90K | 1.64 |
+| Target | -- | -- | > 1.5 (world-class) |
+
+*Magic Number > 1.0 = healthy.* >1.5 = exceptional. PAX projected at 1.64 due to low infrastructure cost, compliance-mandatory market (demand-pull), and no cloud dependency for delivery.
+
+---
+
+Burn Multiple
+
+| Scenario | Monthly Burn | Monthly New ARR | Burn Multiple |
+|---|---|---|---|
+| Current (pre-revenue) | $28,000 | $0 | N/A |
+| First 3 customers | $75,000 | $46,250 | 1.6x |
+| 12 customers | $180,000 | $115,000 | 1.6x |
+| 58 customers (2028) | $380,000 | $683,000 | 0.6x (exceptional) |
+
+*Burn multiple < 1.5x at scale = Sequoia-grade efficiency.*
+
+---
+
+Cohort Retention Assumptions
+
+| Metric | Value | Basis |
+|---|---|---|
+| Net Revenue Retention (NRR) | 118% | Upsell: Startup -> Growth -> Enterprise as usage grows |
+| Gross Retention | 92% | Infrastructure-dependent customers rarely churn |
+| Expansion ARR | 26% of cohort yr2 | Tier upgrades + seat expansion |
+
+---
+
+Sensitivity Analysis (Cost per Token)
+
+| GPU Hours/mo | Tokens Generated | Cost/1M tok | Margin at $185K ACV |
+|---|---|---|---|
+| 200 | 1B | $0.08 | 94.1% |
+| 1,000 | 5B | $0.08 | 94.1% |
+| 5,000 | 25B | $0.072 (reserved) | 95.0% |
+| 20,000 | 100B | $0.036 (reserved bulk) | 97.6% |
+
+Margins improve at scale. Unit economics are hardware-driven, not human-driven.
+
+---
+
+Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · October 2026
+PAX L5 Narrow L2 General 27B · $0.08/1M tokens on T4 GPU
+Harvard Dataverse DOI 10.7910/DVN/YMJKOG · ORCID 0009-0009-2233-6107

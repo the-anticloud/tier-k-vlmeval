@@ -1,0 +1,42 @@
+{
+  "benchmark": "SLSA_Lab_Results",
+  "project": "K_VLMEVAL",
+  "timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "reproducibility_spec": {
+    "framework": "Anticloud Benchmark Reproducibility Standard v1",
+    "based_on": "HELM reproducibility principles (stanford-crfm/helm)",
+    "source": "https://github.com/stanford-crfm/helm"
+  },
+  "environment": {
+    "platform": "win32",
+    "python_version": "3.12.10",
+    "os": "nt",
+    "working_dir": "E:\\fenta\\Downloads\\The Anticloud"
+  },
+  "inputs": {
+    "project_name": "K_VLMEVAL",
+    "slug": "open-compass/VLMEvalKit",
+    "commit": "54a063c5bf75",
+    "tracked_files": 855,
+    "source_lines": 204427,
+    "licence": "Apache-2.0",
+    "size_mb": 11.82
+  },
+  "inputs_hash": "1ec8838cdfdf586bea1ed30713c7bdf81db7b981d51ff0b74bcd027f832aead2",
+  "outputs": {
+    "results_file": "TIER_6_SECURITY_EVAL\\K_VLMEVAL\\OFFICIAL_BENCHMARKS\\SLSA_Lab_Results\\results.json",
+    "results_sha256": "5cb90304ab1c6c349ec01af8d7e4c6a3efbaa069145031fe495652411e3212b2"
+  },
+  "reproduction_steps": [
+    "1. Clone Anticloud at commit HEAD",
+    "2. Ensure E:\\fenta\\Downloads\\The Anticloud is present",
+    "3. Run: python run_benchmarks_comprehensive.py",
+    "4. Run: python write_benchmark_subfolders.py",
+    "5. Run: python write_ledgers_repro_extra_benchmarks.py",
+    "6. Verify results_sha256 matches sha256(OFFICIAL_BENCHMARKS/SLSA_Lab_Results/results.json)"
+  ],
+  "hf_model": "distilbert-base-uncased",
+  "hf_source": "https://huggingface.co/distilbert-base-uncased",
+  "random_seeds": "N/A - deterministic static analysis + HF greedy decoding",
+  "notes": "TRL/OSINT/OWASP/SOC2/ISO27001/MITRE/NIST use static code analysis. HF uses live CPU inference."
+}

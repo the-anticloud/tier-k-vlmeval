@@ -1,0 +1,60 @@
+{
+  "benchmark": "ISO27001_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:07:07.146295+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_model_load_time_sec": 4.42,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "ISO 27001:2022 + ISO/IEC 42001 AI Governance",
+    "source": "https://gruve.ai/blog/soc-2-and-iso-27001-compliance-ai-powered-audit-trails/",
+    "controls": [
+      {
+        "id": "A.5.1",
+        "name": "Policies for information security",
+        "status": "PASS",
+        "method": "COMPLIANCE/ folder exists"
+      },
+      {
+        "id": "A.8.8",
+        "name": "Management of technical vulnerabilities",
+        "status": "PASS",
+        "method": "Vulnerability management doc exists"
+      },
+      {
+        "id": "A.5.12",
+        "name": "Classification of information",
+        "status": "PASS",
+        "method": "Licence classification present"
+      },
+      {
+        "id": "A.8.25",
+        "name": "Secure development lifecycle",
+        "status": "PASS",
+        "method": "CI/CD workflows (SDLC automation)"
+      },
+      {
+        "id": "A.5.37",
+        "name": "Documented operating procedures",
+        "status": "PASS",
+        "method": "TECHNICAL/ documentation folder exists"
+      },
+      {
+        "id": "AI-42001",
+        "name": "AI Governance (ISO/IEC 42001 supplement)",
+        "status": "PASS",
+        "method": "GOVERNANCE/ folder exists"
+      }
+    ],
+    "passed": 6,
+    "total": 6,
+    "conformance_pct": 100
+  }
+}

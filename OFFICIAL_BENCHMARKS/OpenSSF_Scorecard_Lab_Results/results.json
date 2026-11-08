@@ -1,0 +1,67 @@
+{
+  "benchmark": "OpenSSF_Scorecard_Lab_Results",
+  "project": "K_VLMEVAL",
+  "run_timestamp": "2026-09-30T17:14:20.030944+00:00",
+  "source": "https://scorecard.dev/",
+  "results": {
+    "framework": "OpenSSF Scorecard v4 (local proxy)",
+    "source": "https://scorecard.dev/",
+    "score": 6.0,
+    "max_score": 10,
+    "checks": [
+      {
+        "check": "Branch-Protection",
+        "pass": true,
+        "score": 10
+      },
+      {
+        "check": "CI-Tests",
+        "pass": true,
+        "score": 10
+      },
+      {
+        "check": "Code-Review",
+        "pass": false,
+        "score": 0
+      },
+      {
+        "check": "Dependency-Update-Tool",
+        "pass": false,
+        "score": 0
+      },
+      {
+        "check": "Fuzzing",
+        "pass": false,
+        "score": 0
+      },
+      {
+        "check": "License",
+        "pass": true,
+        "score": 10
+      },
+      {
+        "check": "Pinned-Dependencies",
+        "pass": true,
+        "score": 10
+      },
+      {
+        "check": "SAST",
+        "pass": true,
+        "score": 10
+      },
+      {
+        "check": "Security-Policy",
+        "pass": false,
+        "score": 0
+      },
+      {
+        "check": "Signed-Releases",
+        "pass": true,
+        "score": 10
+      }
+    ],
+    "slug": "open-compass/VLMEvalKit",
+    "note": "Proxy run locally. Full score requires: SCORECARD_TOKEN env + GitHub API access.",
+    "status": "PARTIAL"
+  }
+}

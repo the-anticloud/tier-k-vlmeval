@@ -1,0 +1,7 @@
+{
+  "benchmark": "NIST_AI_RMF_Lab_Results",
+  "title": "NIST AI RMF Implementation Guide",
+  "source": "https://www.nist.gov/itl/ai-risk-management-framework",
+  "generated": "2026-09-30T15:17:39.312703+00:00",
+  "content_preview": "## NIST AI RMF 1.0 + Generative AI Profile \u2014 Implementation Guide\n\n### Four Core Functions\n| Function | Description | Key Activities |\n| -------- | ----------- | -------------- |\n| **GOVERN** | Polici..."
+}

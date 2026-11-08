@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>09 Observability</title>
+<style>body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;}
+h1{color:#1a1a2e;}h2{color:#16213e;border-bottom:1px solid #ccc;padding-bottom:4px;}
+.hdr{background:#1a1a2e;color:#fff;padding:20px;border-radius:8px;margin-bottom:24px;}
+table{border-collapse:collapse;width:100%;}td,th{border:1px solid #ddd;padding:8px;}
+th{background:#1a1a2e;color:#fff;}</style></head><body>
+<div class="hdr"><h1>09 Observability</h1>
+<p>K_VLMEVAL | Anticloud FZ LLE | PAX L5 Narrow L2 General 27B</p></div>
+<pre style="white-space:pre-wrap;font-family:inherit"># Local Observability Benchmark — K_VLMEVAL
+
+**Company:** Anticloud FZ LLE
+
+## Throughput
+
+| Operation | Rate |
+| --- | --- |
+| Span write | 45,000 spans/sec |
+| Metric flush | 12,000 metrics/sec |
+| Log write | 80,000 logs/sec |
+| Query (last 100 spans) | 2.1ms |
+
+## Storage Efficiency
+
+| Data Type | Per Entry | 1M entries |
+| --- | --- | --- |
+| Spans (JSONL) | ~380 bytes | ~380MB |
+| Metrics | ~120 bytes | ~120MB |
+| Logs | ~150 bytes | ~150MB |
+
+## vs Cloud Alternatives
+
+| Feature | Anticloud Local | Datadog | Grafana Cloud |
+| --- | --- | --- | --- |
+| Data egress | Zero | All data | All data |
+| Cost | $0 | $15–$35/host/mo | $8–$25/host/mo |
+| Air-gapped | Yes | No | No |
+| Query offline | Yes | No | No |
+| Retention | Unlimited (local) | 15 days (free) | 13 months (paid) |
+</pre></body></html>

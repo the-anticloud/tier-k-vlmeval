@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developer Tutorial — K_VLMEVAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--a:#c83218;--bg:#f9f8f4;--fg:#0d0d0c;--fg2:#383836;--rule:#d8d4ca}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;font-size:16px;line-height:1.75}
+.hdr{background:#0d0d0c;color:#f0ede4;padding:40px 48px 32px;border-bottom:3px solid var(--a)}
+.hdr h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+.hdr .m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,228,.5)}
+.hdr .m span{color:#c83218;margin-right:14px}
+.c{max-width:840px;margin:0 auto;padding:40px 48px 72px}
+h1{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin:36px 0 12px;border-bottom:2px solid var(--a);padding-bottom:7px}
+h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:28px 0 10px}
+h3{font-size:1.05rem;font-weight:700;margin:20px 0 7px}
+h4{font-size:.95rem;font-weight:600;margin:14px 0 5px;color:var(--fg2)}
+p{margin-bottom:12px;color:var(--fg2)}
+strong{color:var(--fg);font-weight:700}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#e8e4dc;padding:2px 6px;border-radius:2px;color:var(--a)}
+pre{background:#1a1a18;color:#e8e4dc;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;padding:20px;border-radius:6px;overflow-x:auto;margin:16px 0}
+pre code{background:none;color:inherit;padding:0;border-radius:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:first-child td{font-weight:600;background:#fff9ee;border-bottom:2px solid var(--a)}
+li{margin:5px 0 5px 20px;color:var(--fg2)}
+.ftr{background:#0d0d0c;color:rgba(240,237,228,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:14px 48px;text-transform:uppercase}
+@media(max-width:640px){.hdr,.c,.ftr{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Developer Tutorial — K_VLMEVAL</h1>
+  <div class="m"><span>Anticloud FZ LLE</span><span>0-1.gg</span><span>lois@0-1.gg</span><span>Dubai, UAE</span></div>
+</div>
+<div class="c"><p><h1>Developer Tutorial — K_VLMEVAL</h1></p>
+<br>
+<p><strong>Project:</strong> <code>K_VLMEVAL</code></p>
+<p><strong>Tier:</strong> TIER_6_SECURITY_EVAL</p>
+<p><strong>Domain:</strong> security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection</p>
+<p><strong>Maintainer:</strong> Anticloud FZ LLE · 0-1.gg · lois@0-1.gg · Dubai, UAE</p>
+<p><strong>Model:</strong> Anticloud PAX L5 Narrow L2 General 27B</p>
+<p><strong>AIOSS Chain:</strong> <code>8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560</code></p>
+<p><strong>Date:</strong> October 2026</p>
+<br>
+<hr>
+<br>
+<p><h2>Who This Is For</h2></p>
+<br>
+<p>This tutorial is for software engineers integrating <code>K_VLMEVAL</code> into their stack. It assumes familiarity with Python, REST APIs, and basic DevOps. No prior Anticloud experience required.</p>
+<br>
+<p><h2>Prerequisites</h2></p>
+<br>
+<p><code>`</code>bash</p>
+<p><h1>Python 3.10+</h1></p>
+<p>python --version</p>
+<br>
+<p><h1>CUDA 12.0+ (for GPU inference)</h1></p>
+<p>nvcc --version</p>
+<br>
+<p><h1>Install core dependencies</h1></p>
+<p>pip install anticloud-pax transformers accelerate bitsandbytes</p>
+<p>pip install huggingface_hub requests</p>
+<p><code>`</code></p>
+<br>
+<p><h2>Quick Start: 5 Minutes to First Inference</h2></p>
+<br>
+<p><h3>Step 1: Configure AIOSS Chain</h3></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.aioss import AIAOSSLedger</p>
+<br>
+<p><h1>Initialize chain from published genesis</h1></p>
+<p>ledger = AIAOSSLedger(</p>
+<p>    genesis_hash="8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560",</p>
+<p>    project="K_VLMEVAL",</p>
+<p>    signing_key_path="./keys/deployment.ed25519"</p>
+<p>)</p>
+<p><code>`</code></p>
+<br>
+<p><h3>Step 2: Load PAX 27B</h3></p>
+<br>
+<p><code>`</code>python</p>
+<p>from anticloud.pax import PAXInference</p>
+<br>
+<p>pax = PAXInference(</p>
+<p>    model_id="kleinnner/pax-l5-narrow-l2-general-27b-q4",</p>
+<p>    device="cuda",</p>
+<p>    ledger=ledger,  # AIOSS chain auto-logs every inference</p>
+<p>)</p>
+<p><code>`</code></p>
+<br>
+<p><h3>Step 3: Run Inference</h3></p>
+<br>
+<p><code>`</code>python</p>
+<p>result = pax.generate(</p>
+<p>    prompt="Summarize patient record for HIPAA audit trail",</p>
+<p>    max_tokens=512,</p>
+<p>    compliance_mode="hipaa",  # Enforces PII redaction</p>
+<p>)</p>
+<br>
+<p>print(result.text)</p>
+<p>print(f"AIOSS entry: {result.chain_entry_hash}")</p>
+<p>print(f"Latency: {result.latency_ms}ms")</p>
+<p><code>`</code></p>
+<br>
+<p><h2>Architecture Reference</h2></p>
+<br>
+<p><code>K_VLMEVAL</code> participates in the Anticloud security evaluation, red-team, MITRE ATT&CK, OSINT, threat detection layer. Key integration points:</p>
+<br>
+<p>1. <strong>AIOSS Ledger</strong> — All operations log to the append-only chain</p>
+<p>2. <strong>KANTOR K5</strong> — Deployment archives are K5-hashed before loading</p>
+<p>3. <strong>SoT Layer</strong> — Proprioceptive typed state model for self-aware operation</p>
+<p>4. <strong>Compliance Engine</strong> — GDPR/HIPAA/FedRAMP controls are structural, not bolt-on</p>
+<br>
+<p><h2>Existing Documentation in This Project</h2></p>
+<br>
+<li><code>00_README.md</code></li>
+<li><code>01_INVESTOR_PACKAGE\FINANCIAL_MODEL.md</code></li>
+<li><code>01_INVESTOR_PACKAGE\GTM_STRATEGY.md</code></li>
+<li><code>01_INVESTOR_PACKAGE\HIRING_PLAN.md</code></li>
+<li><code>01_INVESTOR_PACKAGE\IP_ASSIGNMENT.md</code></li>
+<li><code>01_INVESTOR_PACKAGE\USE_OF_FUNDS.md</code></li>
+<li><code>02_COMMITMENT_TO_SOCIETY\COMMITMENT_TO_SOCIETY.md</code></li>
+<li><code>03_COMMITMENT_TO_HUMANITY\COMMITMENT_TO_HUMANITY.md</code></li>
+<br>
+<p><h2>Error Codes</h2></p>
+<br>
+<table>
+<tr><td>Code</td><td>Meaning</td><td>Resolution</td></tr>
+<tr><td><code>AIOSS_CHAIN_BREAK</code></td><td>Chain hash mismatch</td><td>Verify genesis hash, check for tampering</td></tr>
+<tr><td><code>K5_VERIFY_FAIL</code></td><td>Archive integrity failure</td><td>Re-download, verify HASHES.md</td></tr>
+<tr><td><code>COMPLIANCE_BLOCK</code></td><td>PII/PHI detected, blocked</td><td>Use compliance_mode parameter</td></tr>
+<tr><td><code>VRAM_OOM</code></td><td>GPU memory exceeded</td><td>Use Q4 quantization or smaller batch</td></tr>
+</table>
+<br>
+<p><strong>Support:</strong> lois@0-1.gg · 0-1.gg</p>
+<br></div>
+<div class="ftr">Anticloud FZ LLE · AIOSS: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560 · Apache 2.0 / Anticommons Enterprise License 1.0</div>
+</body>
+</html>

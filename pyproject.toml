@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k-vlmeval-anticloud"
+version = "0.1.0"
+description = "K_VLMEVAL -- Anticloud adapter over vendored open-compass/VLMEvalKit"
+requires-python = ">=3.10"
+
+# Anticommons 0.1.0 is a DUAL licence with user choice (01_LICENSE.md:18 --
+# "Users and organizations may choose the license that best fits their
+# needs"), so the SPDX operator is OR, not AND. The enterprise arm has no
+# OSI-approved identifier, so it is carried as a LicenseRef.
+license = { text = "Apache-2.0 OR LicenseRef-Anticommons-Enterprise-1.0" }
+
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "License :: Other/Proprietary License :: Anticommons Enterprise License",
+]
+
+dependencies = ["anticloud-integration"]
+
+[project.scripts]
+k-vlmeval-anticloud = "k-vlmeval-anticloud.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+norecursedirs = ["UPSTREAM", "ledger", ".git"]

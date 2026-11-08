@@ -1,0 +1,47 @@
+{
+  "benchmark": "HELM_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_load_time_sec": 2.96,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "HELM \u2014 Stanford Holistic Evaluation of Language Models (proxy)",
+    "source": "https://github.com/stanford-crfm/helm",
+    "note": "Full HELM requires GPU. Proxy: consistency + latency across 3 deterministic runs.",
+    "input": "Project K_VLMEVAL provides 855 tracked files across ['Python', 'JavaScript'] with 204427 source lines.",
+    "runs": [
+      {
+        "seed": 0,
+        "label": "LABEL_0",
+        "score": 0.5289,
+        "latency_ms": 41.56
+      },
+      {
+        "seed": 1,
+        "label": "LABEL_0",
+        "score": 0.5289,
+        "latency_ms": 40.52
+      },
+      {
+        "seed": 2,
+        "label": "LABEL_0",
+        "score": 0.5289,
+        "latency_ms": 43.51
+      }
+    ],
+    "consistency": "PASS",
+    "avg_latency_ms": 41.86,
+    "status": "PASS",
+    "language_diversity": 3,
+    "primary_language": "Python",
+    "fairness_keywords_found": true
+  }
+}

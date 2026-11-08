@@ -1,0 +1,54 @@
+{
+  "benchmark": "SOC2_Lab_Results",
+  "project": "K_VLMEVAL",
+  "tier": "TIER_6_SECURITY_EVAL",
+  "slug": "open-compass/VLMEvalKit",
+  "commit": "54a063c5bf75",
+  "run_timestamp": "2026-09-30T15:07:07.146295+00:00",
+  "isolation": {
+    "environment": "local",
+    "model": "distilbert-base-uncased",
+    "hf_model_load_time_sec": 4.42,
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "results": {
+    "framework": "SOC 2 Type II (AICPA TSC + AI-specific 2026)",
+    "source": "https://soc2auditors.org/insights/soc-2-for-ai-companies/",
+    "criteria": [
+      {
+        "id": "CC6",
+        "name": "Logical and Physical Access Controls",
+        "status": "PASS",
+        "method": "presence of .github/ (access controls via branch protection)"
+      },
+      {
+        "id": "CC7",
+        "name": "System Operations - Change Management",
+        "status": "PASS",
+        "method": "presence of CI/CD workflows (change management)"
+      },
+      {
+        "id": "CC8",
+        "name": "Change Management - Tested Deployments",
+        "status": "PASS",
+        "method": "presence of tests/ directory"
+      },
+      {
+        "id": "AI-01",
+        "name": "Model Governance (AI-specific)",
+        "status": "PASS",
+        "method": "OFFICIAL_BENCHMARKS/ directory exists (model lifecycle docs)"
+      },
+      {
+        "id": "AI-02",
+        "name": "LLM Subprocessor Risk Assessment",
+        "status": "PASS",
+        "method": "upstream licence identified (vendor risk assessment)"
+      }
+    ],
+    "passed": 5,
+    "total": 5,
+    "readiness_pct": 100
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "benchmark": "Radon_Complexity_Lab_Results",
+  "project": "K_VLMEVAL",
+  "run_timestamp": "2026-09-30T17:14:20.030944+00:00",
+  "source": "https://radon.readthedocs.io/",
+  "results": {
+    "framework": "Radon \u2014 Cyclomatic Complexity & Maintainability Index",
+    "source": "https://radon.readthedocs.io/",
+    "files_analyzed": 10,
+    "average_complexity": {
+      "grade": "B",
+      "score": 5.586206896551724
+    },
+    "complexity_grade": "B",
+    "complexity_score": 5.586206896551724,
+    "status": "PASS",
+    "raw_output": "E:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\run.py\n    F 620:0 run_local_mode - F (73)\n    F 1068:0 run_api_mode - D (27)\n    F 195:0 build_dataset_from_config_dict - C (14)\n    F 111:0 log_run_benchmark_report - C (13)\n    F 265:0 load_data_config - C (12)\n    F 363:0 get_judge_kwargs - C (12)\n    F 251:0 apply_supported_vlm_cli_overrides - B (9)\n    F 316:0 build_model_from_base_url - B (9)\n    F 421:0 parse_reuse_aux_arg - B (9)\n    F 170:0 _get_dataset_init_params - B (8)\n    F 75:0 _format_sigfig - B (6)\n    F 140:0 build_model_from_config - B (6)\n    F 88:0 _format_metric_field - A (5)\n    F 98:0 _iter_primary_metric_rows - A (5)\n    F 20:0 get_gpu_list - A (4)\n    F 69:0 _format_fail_rate - A (4)\n    F 304:0 get_api_model_class - A (4)\n    F 356:0 validate_default_judge_model - A (4)\n    F 163:0 _require_non_empty_str - A (3)\n    F 234:0 build_dataset_from_spec - A (3)\n    F 437:0 parse_args - A (3)\n    F 245:0 get_effective_dataset_class_name - A (2)\n    F 292:0 get_dataset_build_kwargs - A (2)\n    F 1291:0 main - A (2)\n    F 225:0 build_dataset_from_config - A (1)\n    F 299:0 build_dataset_from_cli - A (1)\nE:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\setup.py\n    F 8:0 parse_requirements - A (1)\n    F 88:0 do_setup - A (1)\nE:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\scripts\\auto_run.py\n    F 18:0 is_large - A (3)\n    F 9:0 is_api - A (1)\nE:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECUR",
+    "mi_output": "E:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\run.py - C (0.00)\nE:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\setup.py - A (67.17)\nE:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\scripts\\apires_scan.py - A (50.76)\nE:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\scripts\\auto_run.py - A (58.47)\nE:\\fenta\\Downloads\\The Anticloud\\TIER_6_SECURITY_EVAL\\K_VLMEVAL\\UPSTREAM\\scripts\\build_longdocurl_tsv."
+  }
+}

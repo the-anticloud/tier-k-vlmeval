@@ -1,0 +1,7 @@
+{
+  "benchmark": "MITRE_ATTCK_Lab_Results",
+  "title": "MITRE ATT&CK Evaluation Strategy",
+  "source": "https://evals.mitre.org/methodology-specification/",
+  "generated": "2026-09-30T15:17:39.312703+00:00",
+  "content_preview": "## MITRE ATT&CK Evaluation \u2014 Implementation Guide (2024)\n\n### Three Quality Dimensions\n| Dimension | Description | How to Improve |\n| --------- | ----------- | -------------- |\n| **DQI** (Detection Qu..."
+}

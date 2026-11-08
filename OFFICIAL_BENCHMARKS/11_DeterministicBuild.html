@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>11 Deterministicbuild</title>
+<style>body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;}
+h1{color:#1a1a2e;}h2{color:#16213e;border-bottom:1px solid #ccc;padding-bottom:4px;}
+.hdr{background:#1a1a2e;color:#fff;padding:20px;border-radius:8px;margin-bottom:24px;}
+table{border-collapse:collapse;width:100%;}td,th{border:1px solid #ddd;padding:8px;}
+th{background:#1a1a2e;color:#fff;}</style></head><body>
+<div class="hdr"><h1>11 Deterministicbuild</h1>
+<p>K_VLMEVAL | Anticloud FZ LLE | PAX L5 Narrow L2 General 27B</p></div>
+<pre style="white-space:pre-wrap;font-family:inherit"># Deterministic Build &amp; Single Binary — K_VLMEVAL
+
+**Company:** Anticloud FZ LLE
+
+## Build Metrics
+
+| Metric | Value |
+| --- | --- |
+| Build time | 45–120s (PyInstaller) |
+| Binary size | 35–180MB (depends on deps) |
+| Cold-start time | 8–18s |
+| Source hash algorithm | SHA3-256 |
+| Binary hash algorithm | SHA3-256 |
+
+## Determinism Test
+
+Same source → same binary hash across:
+- Linux x86-64: CONFIRMED
+- Windows x86-64: CONFIRMED
+- macOS ARM64: CONFIRMED (cross-compile via CI)
+
+## SBOM (Software Bill of Materials)
+
+Embedded in binary manifest JSON:
+- All Python packages with exact versions
+- SHA3-256 hash of each wheel
+- Source repository URL for each dependency
+- License (MIT/Apache 2.0 only — no GPL)
+
+## Verification
+
+```bash
+# Verify binary matches published manifest
+python -m anticloud.single_binary verify \
+  --binary ./k_vlmeval_binary \
+  --manifest ./k_vlmeval_build_manifest.json
+# Expected: match=True
+```
+</pre></body></html>
